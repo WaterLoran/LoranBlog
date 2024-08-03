@@ -35,6 +35,7 @@ module.exports = {
                 items:[
                     {text:'Mysql', link: '/test_development/mysql/Mysql常用操作'},
                     {text:'测试平台', link: '/test_development/platform/简易测试平台Demo'},
+                    {text:'故事', link: '/test_development/story/初次用java写工具时引入BUG的思考体会'},
                 ]
             },            
             {
@@ -141,6 +142,14 @@ module.exports = {
                     collapsable: false,
                     children: [
                         { title: "简易测试平台Demo", path: "/test_development/platform/简易测试平台Demo" },
+                    ]
+                },
+                {
+                    title: "故事",
+                    path: "/test_development/story/初次用java写工具时引入BUG的思考体会", //  这个路径是 title为"自动化测试经验" 博客 文本路径
+                    collapsable: false,
+                    children: [
+                        { title: "初次用java写工具时引入BUG的思考体会", path: "/test_development/story/初次用java写工具时引入BUG的思考体会" },
                     ]
                 },
             ],            
