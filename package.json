@@ -1,0 +1,24 @@
+{
+  "name": "eprosblog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gh-pages": "^6.1.1",
+    "vuepress": "^1.9.10",
+    "vuepress-theme-reco": "^1.6.17"
+  },
+  "dependencies": {
+    "serve": "^14.2.3"
+  }
+}
