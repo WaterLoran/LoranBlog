@@ -18,9 +18,10 @@ module.exports = {
                 text: '自动化测试',
                 items:[
                     // 仅用于编写一些常用的或者目录级别的跳转, 或者关键节点的跳转
-                    {text:'自动化测试经验', link: '/autotest/总览'},
+                    {text:'自动化测试经验', link: '/autotest/experience/自动化测试落地方案及要求'},
                     {text:'工具库', link: '/autotest/tools/Pytest常用摘要'},
-                    {text:'App测试', link: '/autotest/App测试/App自动化测试'}   
+                    {text:'App测试', link: '/autotest/App测试/App自动化测试'},
+                    {text:'经验', link: '/autotest/experience/自动化测试落地方案及要求'}
                 ]
             },
             {
@@ -69,11 +70,12 @@ module.exports = {
             ],  
             '/autotest/': [
                 {
-                    title: "自动化测试经验",
-                    path: "/autotest/总览", //  这个路径是 title为"自动化测试经验" 博客 文本路径
+                    title: "自动化测试落地方案及要求",
+                    path: "/autotest/experience/自动化测试落地方案及要求", //  这个路径是 title为"自动化测试经验" 博客 文本路径
                     collapsable: false,
                     children: [
-                        { title: "小公司做自动化的困境", path: "/autotest/小公司做自动化的困境" },
+                        { title: "小公司做自动化的困境", path: "/autotest/experience/小公司做自动化的困境" },
+                        { title: "自动化测试落地方案及要求", path: "/autotest/experience/自动化测试落地方案及要求" },
                     ]
                 },
                 {
