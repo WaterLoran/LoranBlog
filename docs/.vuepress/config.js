@@ -161,7 +161,7 @@ module.exports = {
                     collapsable: false,
                     children: [
                         { title: "初次用java写工具时引入BUG的思考体会", path: "/test_development/story/初次用java写工具时引入BUG的思考体会" },
-                        { title: "开发某需求焦灼时候的一些心里想法", path: "/test_development/story/开发某需求焦灼时候的一些心里想法" },
+                        { title: "开发某需求焦灼时候的一些心里想法", path: "/test_development/story/开发某需求焦灼时候的一些心里想法" }
                     ]
                 },
             ],            
