@@ -76,7 +76,8 @@ module.exports = {
                     children: [
                         { title: "小公司做自动化的困境", path: "/autotest/experience/小公司做自动化的困境" },
                         { title: "自动化测试落地方案及要求", path: "/autotest/experience/自动化测试落地方案及要求" },
-                        { title: "吐槽一下那些自动化框架", path: "/autotest/experience/吐槽一下那些自动化框架" },
+                        { title: "自动化测试落地方案及要求", path: "/autotest/experience/自动化测试落地方案及要求" },
+                        { title: "自动化都有哪一些工作内容", path: "/autotest/experience/自动化都有哪一些工作内容" },
                     ]
                 },
                 {
