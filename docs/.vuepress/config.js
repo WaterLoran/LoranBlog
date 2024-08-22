@@ -17,10 +17,10 @@ module.exports = {
             'items': [{
                 'text': 'Litemall性能测试实战',
                 'link': '/性能测试/Litemall性能测试实战/Litemall性能测试实战_00前言'
-            }, {'text': '理论', 'link': '/性能测试/理论/各类性能测试的概念与区别'}, {
-                'text': '经验',
-                'link': '/性能测试/经验/一次性能交付测试经历'
-            }]
+            }, {'text': '企业性能测试', 'link': '/性能测试/企业性能测试/9.2.3 性能瓶颈定位思路'}, {
+                'text': '理论',
+                'link': '/性能测试/理论/各类性能测试的概念与区别'
+            }, {'text': '经验', 'link': '/性能测试/经验/一次性能交付测试经历'}]
         }, {
             'text': '测试开发',
             'items': [{'text': 'mysql', 'link': '/测试开发/mysql/Mysql常用操作'}, {
@@ -116,6 +116,14 @@ module.exports = {
                     'title': 'Litemall性能测试实战_11测试报告',
                     'path': '/性能测试/Litemall性能测试实战/Litemall性能测试实战_11测试报告'
                 }, {'title': 'RuoYi_Vue3搭建', 'path': '/性能测试/Litemall性能测试实战/RuoYi_Vue3搭建'}]
+            }, {
+                'title': '企业性能测试',
+                'path': '/性能测试/企业性能测试/9.2.3 性能瓶颈定位思路',
+                'collapsable': false,
+                'children': [{
+                    'title': '9.2.3 性能瓶颈定位思路',
+                    'path': '/性能测试/企业性能测试/9.2.3 性能瓶颈定位思路'
+                }]
             }, {
                 'title': '理论',
                 'path': '/性能测试/理论/各类性能测试的概念与区别',
