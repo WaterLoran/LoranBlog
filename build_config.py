@@ -116,10 +116,36 @@ module.exports = {{
         nav: {nav},
         sidebar: {sidebar},
     }},
-    plugins: [
-        '@vuepress/plugin-back-to-top', // 返回顶部插件
-        '@vuepress/plugin-medium-zoom', // 图片放大插件
-    ]
+enhanceAppFiles: [
+    {{
+        name: 'custom-footer',
+        content: `
+            export default ({{
+                router
+            }}) => {{
+                router.afterEach((to, from) => {{
+                    if (typeof window !== 'undefined') {{
+                        // 检查是否已经存在页脚，避免重复添加
+                        if (!document.querySelector('.custom-footer')) {{
+                            const footer = document.createElement('footer');
+                            footer.className = 'custom-footer'; // 给页脚加一个类名
+                            footer.innerHTML = \`
+                            <footer style="text-align: center; margin-top: 0px; padding: 0px;">
+                            <p>粤ICP备2024288002号 | copyright © 2024-present</p>
+                            </footer>
+                            \`;
+                            document.body.appendChild(footer);
+                        }}
+                    }}
+                }});
+            }};
+        `
+    }}
+],
+plugins: [
+    '@vuepress/plugin-back-to-top', // 返回顶部插件
+    '@vuepress/plugin-medium-zoom', // 图片放大插件
+]
 }}
 """
     config_content = config_content.replace("False", 'false').replace('False', 'false')
