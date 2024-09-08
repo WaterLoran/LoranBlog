@@ -19,6 +19,12 @@ module.exports = {
                 'link': '/性能测试/理论/各类性能测试的概念与区别'
             }, {'text': '经验', 'link': '/性能测试/经验/一次性能交付测试经历'}]
         }, {
+            'text': '测试体系',
+            'items': [{'text': '质量内建', 'link': '/测试体系/质量内建/整体概览'}, {
+                'text': '质量赋能',
+                'link': '/测试体系/质量赋能/整体概览'
+            }]
+        }, {
             'text': '测试开发',
             'items': [{'text': 'mysql', 'link': '/测试开发/mysql/Mysql常用操作'}, {
                 'text': '专项',
@@ -140,6 +146,17 @@ module.exports = {
                 'path': '/性能测试/经验/一次性能交付测试经历',
                 'collapsable': false,
                 'children': [{'title': '一次性能交付测试经历', 'path': '/性能测试/经验/一次性能交付测试经历'}]
+            }],
+            '/测试体系/': [{
+                'title': '质量内建',
+                'path': '/测试体系/质量内建/整体概览',
+                'collapsable': false,
+                'children': [{'title': '整体概览', 'path': '/测试体系/质量内建/整体概览'}]
+            }, {
+                'title': '质量赋能',
+                'path': '/测试体系/质量赋能/整体概览',
+                'collapsable': false,
+                'children': [{'title': '整体概览', 'path': '/测试体系/质量赋能/整体概览'}]
             }],
             '/测试开发/': [{
                 'title': 'mysql',
