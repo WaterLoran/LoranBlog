@@ -8,7 +8,7 @@ module.exports = {
             'items': [{'text': '理论', 'link': '/功能测试/理论/基于风险和质量的测试策略'}, {
                 'text': '经验',
                 'link': '/功能测试/经验/Devops过程中的各种迭代交付问题'
-            }]
+            }, {'text': '软件测试经验与教训', 'link': '/功能测试/软件测试经验与教训/如何制定语境驱动的测试计划'}]
         }, {
             'text': '性能测试',
             'items': [{
@@ -18,6 +18,12 @@ module.exports = {
                 'text': '理论',
                 'link': '/性能测试/理论/各类性能测试的概念与区别'
             }, {'text': '经验', 'link': '/性能测试/经验/一次性能交付测试经历'}]
+        }, {
+            'text': '测试体系',
+            'items': [{'text': '质量内建', 'link': '/测试体系/质量内建/整体概览'}, {
+                'text': '质量赋能',
+                'link': '/测试体系/质量赋能/整体概览'
+            }]
         }, {
             'text': '测试开发',
             'items': [{'text': 'mysql', 'link': '/测试开发/mysql/Mysql常用操作'}, {
@@ -60,6 +66,23 @@ module.exports = {
                     'title': 'Devops过程中的各种迭代交付问题',
                     'path': '/功能测试/经验/Devops过程中的各种迭代交付问题'
                 }]
+            }, {
+                'title': '软件测试经验与教训',
+                'path': '/功能测试/软件测试经验与教训/如何制定语境驱动的测试计划',
+                'collapsable': false,
+                'children': [{
+                    'title': '如何制定语境驱动的测试计划',
+                    'path': '/功能测试/软件测试经验与教训/如何制定语境驱动的测试计划'
+                }, {
+                    'title': '程序错误分析-1',
+                    'path': '/功能测试/软件测试经验与教训/程序错误分析-1'
+                }, {
+                    'title': '经验41-如果遗漏一个问题那就检查这种遗漏是意外还是策略的必然结果',
+                    'path': '/功能测试/软件测试经验与教训/经验41-如果遗漏一个问题那就检查这种遗漏是意外还是策略的必然结果'
+                }, {
+                    'title': '经验42-困惑是一种测试工具',
+                    'path': '/功能测试/软件测试经验与教训/经验42-困惑是一种测试工具'
+                }, {'title': '计划测试策略', 'path': '/功能测试/软件测试经验与教训/计划测试策略'}]
             }],
             '/性能测试/': [{
                 'title': 'Litemall性能测试实战',
@@ -124,6 +147,17 @@ module.exports = {
                 'collapsable': false,
                 'children': [{'title': '一次性能交付测试经历', 'path': '/性能测试/经验/一次性能交付测试经历'}]
             }],
+            '/测试体系/': [{
+                'title': '质量内建',
+                'path': '/测试体系/质量内建/整体概览',
+                'collapsable': false,
+                'children': [{'title': '整体概览', 'path': '/测试体系/质量内建/整体概览'}]
+            }, {
+                'title': '质量赋能',
+                'path': '/测试体系/质量赋能/整体概览',
+                'collapsable': false,
+                'children': [{'title': '整体概览', 'path': '/测试体系/质量赋能/整体概览'}]
+            }],
             '/测试开发/': [{
                 'title': 'mysql',
                 'path': '/测试开发/mysql/Mysql常用操作',
@@ -158,7 +192,7 @@ module.exports = {
                 }, {
                     'title': '开发某需求焦灼时候的一些心里想法',
                     'path': '/测试开发/故事/开发某需求焦灼时候的一些心里想法'
-                }]
+                }, {'title': '测试工具推行的困难', 'path': '/测试开发/故事/测试工具推行的困难'}]
             }, {
                 'title': '测试平台',
                 'path': '/测试开发/测试平台/简易测试平台Demo',
@@ -221,6 +255,32 @@ module.exports = {
             }]
         },
     },
+    enhanceAppFiles: [
+        {
+            name: 'custom-footer',
+            content: `
+            export default ({
+                router
+            }) => {
+                router.afterEach((to, from) => {
+                    if (typeof window !== 'undefined') {
+                        // 检查是否已经存在页脚，避免重复添加
+                        if (!document.querySelector('.custom-footer')) {
+                            const footer = document.createElement('footer');
+                            footer.className = 'custom-footer'; // 给页脚加一个类名
+                            footer.innerHTML = \`
+                            <footer style="text-align: center; margin-top: 0px; padding: 0px;">
+                            <p>粤ICP备2024288002号 | copyright © 2024-present</p>
+                            </footer>
+                            \`;
+                            document.body.appendChild(footer);
+                        }
+                    }
+                });
+            };
+        `
+        }
+    ],
     plugins: [
         '@vuepress/plugin-back-to-top', // 返回顶部插件
         '@vuepress/plugin-medium-zoom', // 图片放大插件
