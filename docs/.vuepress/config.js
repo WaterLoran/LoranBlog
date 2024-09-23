@@ -5,7 +5,7 @@ module.exports = {
     themeConfig: {
         nav: [{'text': '首页', 'link': '/'}, {
             'text': '功能测试',
-            'items': [{'text': '理论', 'link': '/功能测试/理论/基于风险和质量的测试策略'}, {
+            'items': [{'text': '理论', 'link': '/功能测试/理论/UI类BUG特点分析'}, {
                 'text': '经验',
                 'link': '/功能测试/经验/Devops过程中的各种迭代交付问题'
             }, {'text': '软件测试经验与教训', 'link': '/功能测试/软件测试经验与教训/如何制定语境驱动的测试计划'}]
@@ -55,9 +55,12 @@ module.exports = {
         sidebar: {
             '/功能测试/': [{
                 'title': '理论',
-                'path': '/功能测试/理论/基于风险和质量的测试策略',
+                'path': '/功能测试/理论/UI类BUG特点分析',
                 'collapsable': false,
-                'children': [{'title': '基于风险和质量的测试策略', 'path': '/功能测试/理论/基于风险和质量的测试策略'}]
+                'children': [{
+                    'title': 'UI类BUG特点分析',
+                    'path': '/功能测试/理论/UI类BUG特点分析'
+                }, {'title': '基于风险和质量的测试策略', 'path': '/功能测试/理论/基于风险和质量的测试策略'}]
             }, {
                 'title': '经验',
                 'path': '/功能测试/经验/Devops过程中的各种迭代交付问题',
