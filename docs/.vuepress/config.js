@@ -5,7 +5,7 @@ module.exports = {
     themeConfig: {
         nav: [{'text': '首页', 'link': '/'}, {
             'text': '体系思维',
-            'items': [{'text': '测试基础', 'link': '/体系思维/测试基础/测试经理的职责'}, {
+            'items': [{'text': '测试基础', 'link': '/体系思维/测试基础/RACI责任分配矩阵'}, {
                 'text': '质量内建',
                 'link': '/体系思维/质量内建/开卡'
             }, {'text': '质量赋能', 'link': '/体系思维/质量赋能/整体概览'}]
@@ -58,9 +58,12 @@ module.exports = {
         sidebar: {
             '/体系思维/': [{
                 'title': '测试基础',
-                'path': '/体系思维/测试基础/测试经理的职责',
+                'path': '/体系思维/测试基础/RACI责任分配矩阵',
                 'collapsable': false,
                 'children': [{
+                    'title': 'RACI责任分配矩阵',
+                    'path': '/体系思维/测试基础/RACI责任分配矩阵'
+                }, {
                     'title': '测试经理的职责',
                     'path': '/体系思维/测试基础/测试经理的职责'
                 }, {
