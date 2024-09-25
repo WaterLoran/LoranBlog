@@ -64,7 +64,8 @@ module.exports = {
                     'title': 'UI类BUG特点分析',
                     'path': '/功能测试/理论/UI类BUG特点分析'
                 }, {'title': '基于风险和质量的测试策略', 'path': '/功能测试/理论/基于风险和质量的测试策略'}]
-            }, {
+            },
+                {
                 'title': '经验',
                 'path': '/功能测试/经验/Devops过程中的各种迭代交付问题',
                 'collapsable': false,
