@@ -4,6 +4,12 @@ module.exports = {
     theme: 'reco',
     themeConfig: {
         nav: [{'text': '首页', 'link': '/'}, {
+            'text': '体系思维',
+            'items': [{'text': '测试基础', 'link': '/体系思维/测试基础/RACI责任分配矩阵'}, {
+                'text': '质量内建',
+                'link': '/体系思维/质量内建/开卡'
+            }, {'text': '质量赋能', 'link': '/体系思维/质量赋能/整体概览'}]
+        }, {
             'text': '功能测试',
             'items': [{'text': '理论', 'link': '/功能测试/理论/UI类BUG特点分析'}, {
                 'text': '经验',
@@ -18,12 +24,6 @@ module.exports = {
                 'text': '理论',
                 'link': '/性能测试/理论/各类性能测试的概念与区别'
             }, {'text': '经验', 'link': '/性能测试/经验/一次性能交付测试经历'}]
-        }, {
-            'text': '测试体系',
-            'items': [{'text': '质量内建', 'link': '/测试体系/质量内建/开卡'}, {
-                'text': '质量赋能',
-                'link': '/测试体系/质量赋能/整体概览'
-            }]
         }, {
             'text': '测试开发',
             'items': [{'text': 'mysql', 'link': '/测试开发/mysql/Mysql常用操作'}, {
@@ -56,6 +56,40 @@ module.exports = {
             }, {'text': '技术圆桌', 'link': 'https://v2think.com/what-is-leadership'}]
         }],
         sidebar: {
+            '/体系思维/': [{
+                'title': '测试基础',
+                'path': '/体系思维/测试基础/RACI责任分配矩阵',
+                'collapsable': false,
+                'children': [{
+                    'title': 'RACI责任分配矩阵',
+                    'path': '/体系思维/测试基础/RACI责任分配矩阵'
+                }, {
+                    'title': '测试经理的职责',
+                    'path': '/体系思维/测试基础/测试经理的职责'
+                }, {
+                    'title': '测试经理管理外包团队时的职责',
+                    'path': '/体系思维/测试基础/测试经理管理外包团队时的职责'
+                }, {'title': '质量维度', 'path': '/体系思维/测试基础/质量维度'}]
+            }, {
+                'title': '质量内建',
+                'path': '/体系思维/质量内建/开卡',
+                'collapsable': false,
+                'children': [{'title': '开卡', 'path': '/体系思维/质量内建/开卡'}, {
+                    'title': '技术债管理',
+                    'path': '/体系思维/质量内建/技术债管理'
+                }, {'title': '整体概览', 'path': '/体系思维/质量内建/整体概览'}]
+            }, {
+                'title': '质量赋能',
+                'path': '/体系思维/质量赋能/整体概览',
+                'collapsable': false,
+                'children': [{'title': '整体概览', 'path': '/体系思维/质量赋能/整体概览'}, {
+                    'title': '测试团队拓扑',
+                    'path': '/体系思维/质量赋能/测试团队拓扑'
+                }, {'title': '测试沟通协作', 'path': '/体系思维/质量赋能/测试沟通协作'}, {
+                    'title': '测试组织架构',
+                    'path': '/体系思维/质量赋能/测试组织架构'
+                }, {'title': '高效率协同因素的关系分析', 'path': '/体系思维/质量赋能/高效率协同因素的关系分析'}]
+            }],
             '/功能测试/': [{
                 'title': '理论',
                 'path': '/功能测试/理论/UI类BUG特点分析',
@@ -162,20 +196,6 @@ module.exports = {
                 'path': '/性能测试/经验/一次性能交付测试经历',
                 'collapsable': false,
                 'children': [{'title': '一次性能交付测试经历', 'path': '/性能测试/经验/一次性能交付测试经历'}]
-            }],
-            '/测试体系/': [{
-                'title': '质量内建',
-                'path': '/测试体系/质量内建/开卡',
-                'collapsable': false,
-                'children': [{'title': '开卡', 'path': '/测试体系/质量内建/开卡'}, {
-                    'title': '技术债管理',
-                    'path': '/测试体系/质量内建/技术债管理'
-                }, {'title': '整体概览', 'path': '/测试体系/质量内建/整体概览'}]
-            }, {
-                'title': '质量赋能',
-                'path': '/测试体系/质量赋能/整体概览',
-                'collapsable': false,
-                'children': [{'title': '整体概览', 'path': '/测试体系/质量赋能/整体概览'}]
             }],
             '/测试开发/': [{
                 'title': 'mysql',
