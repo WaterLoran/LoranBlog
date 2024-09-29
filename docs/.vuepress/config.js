@@ -27,12 +27,15 @@ module.exports = {
         }, {
             'text': '测试开发',
             'items': [{'text': 'mysql', 'link': '/测试开发/mysql/Mysql常用操作'}, {
-                'text': '专项',
-                'link': '/测试开发/专项/B端BPM类软件的升级测试'
-            }, {'text': '兼容测试', 'link': '/测试开发/兼容测试/数据库兼容性测试'}, {
-                'text': '故事',
-                'link': '/测试开发/故事/初次用java写工具时引入BUG的思考体会'
-            }, {'text': '测试平台', 'link': '/测试开发/测试平台/简易测试平台Demo'}]
+                'text': 'redis',
+                'link': '/测试开发/redis/redis中的失效场景'
+            }, {'text': '专项', 'link': '/测试开发/专项/B端BPM类软件的升级测试'}, {
+                'text': '兼容测试',
+                'link': '/测试开发/兼容测试/数据库兼容性测试'
+            }, {'text': '故事', 'link': '/测试开发/故事/初次用java写工具时引入BUG的思考体会'}, {
+                'text': '测试平台',
+                'link': '/测试开发/测试平台/简易测试平台Demo'
+            }]
         }, {
             'text': '自动化框架',
             'items': [{'text': '1.1 快速开始', 'link': '/自动化框架/1.1 快速开始/1.1.1 通过拉取github项目快速开始'}]
@@ -210,6 +213,23 @@ module.exports = {
                 'path': '/测试开发/mysql/Mysql常用操作',
                 'collapsable': false,
                 'children': [{'title': 'Mysql常用操作', 'path': '/测试开发/mysql/Mysql常用操作'}]
+            }, {
+                'title': 'redis',
+                'path': '/测试开发/redis/redis中的失效场景',
+                'collapsable': false,
+                'children': [{
+                    'title': 'redis中的失效场景',
+                    'path': '/测试开发/redis/redis中的失效场景'
+                }, {
+                    'title': 'redis在单体系统和分布式系统中使用的差别',
+                    'path': '/测试开发/redis/redis在单体系统和分布式系统中使用的差别'
+                }, {
+                    'title': 'redis的基本概念',
+                    'path': '/测试开发/redis/redis的基本概念'
+                }, {
+                    'title': '如何针对redis的失效场景做测试',
+                    'path': '/测试开发/redis/如何针对redis的失效场景做测试'
+                }, {'title': '实际业务中如何使用redis', 'path': '/测试开发/redis/实际业务中如何使用redis'}]
             }, {
                 'title': '专项',
                 'path': '/测试开发/专项/B端BPM类软件的升级测试',
