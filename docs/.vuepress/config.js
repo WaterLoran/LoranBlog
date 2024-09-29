@@ -32,10 +32,10 @@ module.exports = {
             }, {'text': '专项', 'link': '/测试开发/专项/B端BPM类软件的升级测试'}, {
                 'text': '兼容测试',
                 'link': '/测试开发/兼容测试/数据库兼容性测试'
-            }, {'text': '故事', 'link': '/测试开发/故事/初次用java写工具时引入BUG的思考体会'}, {
-                'text': '测试平台',
-                'link': '/测试开发/测试平台/简易测试平台Demo'
-            }]
+            }, {'text': '分布式系统', 'link': '/测试开发/分布式系统/分布式系统常用组件'}, {
+                'text': '故事',
+                'link': '/测试开发/故事/初次用java写工具时引入BUG的思考体会'
+            }, {'text': '测试平台', 'link': '/测试开发/测试平台/简易测试平台Demo'}]
         }, {
             'text': '自动化框架',
             'items': [{'text': '1.1 快速开始', 'link': '/自动化框架/1.1 快速开始/1.1.1 通过拉取github项目快速开始'}]
@@ -223,9 +223,12 @@ module.exports = {
                 }, {
                     'title': 'redis在单体系统和分布式系统中使用的差别',
                     'path': '/测试开发/redis/redis在单体系统和分布式系统中使用的差别'
+                }, {'title': 'redis的基本概念', 'path': '/测试开发/redis/redis的基本概念'}, {
+                    'title': 'redis的读写过程',
+                    'path': '/测试开发/redis/redis的读写过程'
                 }, {
-                    'title': 'redis的基本概念',
-                    'path': '/测试开发/redis/redis的基本概念'
+                    'title': 'redis读写的性能消耗',
+                    'path': '/测试开发/redis/redis读写的性能消耗'
                 }, {
                     'title': '如何针对redis的失效场景做测试',
                     'path': '/测试开发/redis/如何针对redis的失效场景做测试'
@@ -249,6 +252,11 @@ module.exports = {
                 'path': '/测试开发/兼容测试/数据库兼容性测试',
                 'collapsable': false,
                 'children': [{'title': '数据库兼容性测试', 'path': '/测试开发/兼容测试/数据库兼容性测试'}]
+            }, {
+                'title': '分布式系统',
+                'path': '/测试开发/分布式系统/分布式系统常用组件',
+                'collapsable': false,
+                'children': [{'title': '分布式系统常用组件', 'path': '/测试开发/分布式系统/分布式系统常用组件'}]
             }, {
                 'title': '故事',
                 'path': '/测试开发/故事/初次用java写工具时引入BUG的思考体会',
