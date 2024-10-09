@@ -69,7 +69,8 @@ def generate_nav_sidebar(base_path):
                     "path": f'/{relative_path}/{first_file}',
                     "collapsable": False,
                     "children": [
-                        {"title": os.path.splitext(file)[0], "path": f'/{relative_path}/{file}'.replace("\\", "/")[:-3]} # 最后要去掉.md
+                        {"title": os.path.splitext(file)[0], "path": f'/{relative_path}/{file}'.replace("\\", "/")[:-3]}
+                        # 最后要去掉.md
                         for file in files if file.endswith('.md')
                     ]
                 })
@@ -99,9 +100,10 @@ def generate_nav_sidebar(base_path):
             {"text": "code2life", "link": "https://code2life.top/archives/"},
             {"text": "技术圆桌", "link": "https://v2think.com/what-is-leadership"},
         ]
-    },)
+    }, )
 
     return nav, sidebar
+
 
 def main():
     base_path = "docs"  # 设定你的文档目录路径
