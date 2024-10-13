@@ -7,7 +7,7 @@ module.exports = {
             'text': '体系思维',
             'items': [{'text': '测试基础', 'link': '/体系思维/测试基础/RACI责任分配矩阵'}, {
                 'text': '质量内建',
-                'link': '/体系思维/质量内建/DeskCheck(结卡)'
+                'link': '/体系思维/质量内建/DeskCheck结卡'
             }, {'text': '质量赋能', 'link': '/体系思维/质量赋能/整体概览'}]
         }, {
             'text': '功能测试',
@@ -114,11 +114,11 @@ module.exports = {
                 }, {'title': '软件中性能和可靠性的联系', 'path': '/体系思维/测试基础/软件中性能和可靠性的联系'}]
             }, {
                 'title': '质量内建',
-                'path': '/体系思维/质量内建/DeskCheck(结卡)',
+                'path': '/体系思维/质量内建/DeskCheck结卡',
                 'collapsable': false,
                 'children': [{
-                    'title': 'DeskCheck(结卡)',
-                    'path': '/体系思维/质量内建/DeskCheck(结卡)'
+                    'title': 'DeskCheck结卡',
+                    'path': '/体系思维/质量内建/DeskCheck结卡'
                 }, {'title': '客户验收', 'path': '/体系思维/质量内建/客户验收'}, {
                     'title': '开卡',
                     'path': '/体系思维/质量内建/开卡'
