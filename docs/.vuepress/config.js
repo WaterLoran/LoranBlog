@@ -4,6 +4,10 @@ module.exports = {
     theme: 'reco',
     themeConfig: {
         nav: [{'text': '首页', 'link': '/'}, {
+            'text': '下载',
+            'link': '/下载/性能相关',
+            'items': []
+        }, {
             'text': '体系思维',
             'items': [{'text': '测试基础', 'link': '/体系思维/测试基础/RACI责任分配矩阵'}, {
                 'text': '质量内建',
@@ -71,6 +75,7 @@ module.exports = {
             }, {'text': '技术圆桌', 'link': 'https://v2think.com/what-is-leadership'}]
         }],
         sidebar: {
+            '/下载/': [],
             '/体系思维/': [{
                 'title': '测试基础',
                 'path': '/体系思维/测试基础/RACI责任分配矩阵',
@@ -500,6 +505,9 @@ module.exports = {
                 'children': [{
                     'title': '一次失败的自动化经历',
                     'path': '/自动化测试/经验/一次失败的自动化经历'
+                }, {
+                    'title': '低效自动化的例子原因',
+                    'path': '/自动化测试/经验/低效自动化的例子原因'
                 }, {
                     'title': '吐槽一下那些自动化框架',
                     'path': '/自动化测试/经验/吐槽一下那些自动化框架'
