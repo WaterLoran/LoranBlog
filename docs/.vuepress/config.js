@@ -4,10 +4,6 @@ module.exports = {
     theme: 'reco',
     themeConfig: {
         nav: [{'text': '首页', 'link': '/'}, {
-            'text': '下载',
-            'link': '/下载/性能相关',
-            'items': []
-        }, {
             'text': '体系思维',
             'items': [{'text': '测试基础', 'link': '/体系思维/测试基础/RACI责任分配矩阵'}, {
                 'text': '质量内建',
@@ -54,7 +50,10 @@ module.exports = {
             }]
         }, {
             'text': '自动化框架',
-            'items': [{'text': '1.1 快速开始', 'link': '/自动化框架/1.1 快速开始/1.1.1 通过拉取github项目快速开始'}]
+            'items': [{
+                'text': '1.1 快速开始',
+                'link': '/自动化框架/1.1 快速开始/1.1.1 通过拉取github项目快速开始'
+            }, {'text': '自学视频', 'link': '/自动化框架/自学视频/框架自学视频'}]
         }, {
             'text': '自动化测试',
             'items': [{'text': 'App测试', 'link': '/自动化测试/App测试/App启动性能分析'}, {
@@ -75,7 +74,6 @@ module.exports = {
             }, {'text': '技术圆桌', 'link': 'https://v2think.com/what-is-leadership'}]
         }],
         sidebar: {
-            '/下载/': [],
             '/体系思维/': [{
                 'title': '测试基础',
                 'path': '/体系思维/测试基础/RACI责任分配矩阵',
@@ -470,6 +468,11 @@ module.exports = {
                     'title': '1.1.2 通过在本地配置快速开始',
                     'path': '/自动化框架/1.1 快速开始/1.1.2 通过在本地配置快速开始'
                 }, {'title': '1.1.3 熟悉并修改工程配置', 'path': '/自动化框架/1.1 快速开始/1.1.3 熟悉并修改工程配置'}]
+            }, {
+                'title': '自学视频',
+                'path': '/自动化框架/自学视频/框架自学视频',
+                'collapsable': false,
+                'children': [{'title': '框架自学视频', 'path': '/自动化框架/自学视频/框架自学视频'}]
             }],
             '/自动化测试/': [{
                 'title': 'App测试',
