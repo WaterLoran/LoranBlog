@@ -47,8 +47,20 @@ module.exports = {
             }, {'text': '测试平台', 'link': '/测试开发/测试平台/简易测试平台Demo'}, {
                 'text': '负载均衡',
                 'link': '/测试开发/负载均衡/微服务间的负载均衡算法'
+            }, {'text': '资损防控', 'link': '/测试开发/资损防控/基本概念'}]
+        }, {
+            'text': '测试管理',
+            'items': [{'text': 'devops', 'link': '/测试管理/devops/devops的发展历史'}, {
+                'text': '团队管理',
+                'link': '/测试管理/团队管理/RACI责任分配矩阵'
+            }, {'text': '外包管理', 'link': '/测试管理/外包管理/测试经理管理外包团队时的职责'}, {
+                'text': '工具选型',
+                'link': '/测试管理/工具选型/腾讯coding平台'
+            }, {'text': '技术管理', 'link': '/测试管理/技术管理/测试技术管理的工作内容'}, {
+                'text': '研发效能',
+                'link': '/测试管理/研发效能/研发效能的工作内容'
             }]
-        }, {'text': '测试管理', 'link': '/测试管理/RACI责任分配矩阵', 'items': []}, {
+        }, {
             'text': '自动化框架',
             'items': [{
                 'text': '1.1 快速开始',
@@ -495,8 +507,49 @@ module.exports = {
                     'title': '针对负载均衡失效场景的测试方法工具和验证',
                     'path': '/测试开发/负载均衡/针对负载均衡失效场景的测试方法工具和验证'
                 }]
+            }, {
+                'title': '资损防控',
+                'path': '/测试开发/资损防控/基本概念',
+                'collapsable': false,
+                'children': [{'title': '基本概念', 'path': '/测试开发/资损防控/基本概念'}]
             }],
-            '/测试管理/': [],
+            '/测试管理/': [{
+                'title': 'devops',
+                'path': '/测试管理/devops/devops的发展历史',
+                'collapsable': false,
+                'children': [{'title': 'devops的发展历史', 'path': '/测试管理/devops/devops的发展历史'}]
+            }, {
+                'title': '团队管理',
+                'path': '/测试管理/团队管理/RACI责任分配矩阵',
+                'collapsable': false,
+                'children': [{
+                    'title': 'RACI责任分配矩阵',
+                    'path': '/测试管理/团队管理/RACI责任分配矩阵'
+                }, {'title': '测试经理的职责', 'path': '/测试管理/团队管理/测试经理的职责'}]
+            }, {
+                'title': '外包管理',
+                'path': '/测试管理/外包管理/测试经理管理外包团队时的职责',
+                'collapsable': false,
+                'children': [{
+                    'title': '测试经理管理外包团队时的职责',
+                    'path': '/测试管理/外包管理/测试经理管理外包团队时的职责'
+                }]
+            }, {
+                'title': '工具选型',
+                'path': '/测试管理/工具选型/腾讯coding平台',
+                'collapsable': false,
+                'children': [{'title': '腾讯coding平台', 'path': '/测试管理/工具选型/腾讯coding平台'}]
+            }, {
+                'title': '技术管理',
+                'path': '/测试管理/技术管理/测试技术管理的工作内容',
+                'collapsable': false,
+                'children': [{'title': '测试技术管理的工作内容', 'path': '/测试管理/技术管理/测试技术管理的工作内容'}]
+            }, {
+                'title': '研发效能',
+                'path': '/测试管理/研发效能/研发效能的工作内容',
+                'collapsable': false,
+                'children': [{'title': '研发效能的工作内容', 'path': '/测试管理/研发效能/研发效能的工作内容'}]
+            }],
             '/自动化框架/': [{
                 'title': '1.1 快速开始',
                 'path': '/自动化框架/1.1 快速开始/1.1.1 通过拉取github项目快速开始',
