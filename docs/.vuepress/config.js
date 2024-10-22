@@ -1,10 +1,6 @@
 module.exports = {
     title: '罗兰测试',
     description: '各类测试理论, 技能, 经验, 故事, 职业发展的博客文档',
-    mode: 'production',
-    optimization: {
-    usedExports: true, // 启用树摇
-    },
     theme: 'reco',
     themeConfig: {
         nav: [{'text': '首页', 'link': '/'}, {
@@ -551,51 +547,6 @@ module.exports = {
                 'path': '/测试开发/资损防控/基本概念',
                 'collapsable': false,
                 'children': [{'title': '基本概念', 'path': '/测试开发/资损防控/基本概念'}]
-            }],
-            '/测试管理/': [{
-                'title': 'devops',
-                'path': '/测试管理/devops/devops的发展历史',
-                'collapsable': false,
-                'children': [{'title': 'devops的发展历史', 'path': '/测试管理/devops/devops的发展历史'}]
-            }, {
-                'title': '团队管理',
-                'path': '/测试管理/团队管理/RACI责任分配矩阵',
-                'collapsable': false,
-                'children': [{
-                    'title': 'RACI责任分配矩阵',
-                    'path': '/测试管理/团队管理/RACI责任分配矩阵'
-                }, {'title': '测试经理的职责', 'path': '/测试管理/团队管理/测试经理的职责'}]
-            }, {
-                'title': '外包管理',
-                'path': '/测试管理/外包管理/测试经理管理外包团队时的职责',
-                'collapsable': false,
-                'children': [{
-                    'title': '测试经理管理外包团队时的职责',
-                    'path': '/测试管理/外包管理/测试经理管理外包团队时的职责'
-                }]
-            }, {
-                'title': '工具选型',
-                'path': '/测试管理/工具选型/腾讯coding平台',
-                'collapsable': false,
-                'children': [{'title': '腾讯coding平台', 'path': '/测试管理/工具选型/腾讯coding平台'}]
-            }, {
-                'title': '技术管理',
-                'path': '/测试管理/技术管理/用例管理',
-                'collapsable': false,
-                'children': [{'title': '用例管理', 'path': '/测试管理/技术管理/用例管理'}]
-            }, {
-                'title': '研发效能',
-                'path': '/测试管理/研发效能/研发效能的工作内容',
-                'collapsable': false,
-                'children': [{'title': '研发效能的工作内容', 'path': '/测试管理/研发效能/研发效能的工作内容'}]
-            }, {
-                'title': '管理杂谈',
-                'path': '/测试管理/管理杂谈/我经历的第一家公司的管理',
-                'collapsable': false,
-                'children': [{
-                    'title': '我经历的第一家公司的管理',
-                    'path': '/测试管理/管理杂谈/我经历的第一家公司的管理'
-                }, {'title': '我经历的第二家公司的管理', 'path': '/测试管理/管理杂谈/我经历的第二家公司的管理'}]
             }],
             '/自动化框架/': [{
                 'title': '1.1 快速开始',
