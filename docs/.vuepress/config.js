@@ -1,6 +1,10 @@
 module.exports = {
     title: '罗兰测试',
     description: '各类测试理论, 技能, 经验, 故事, 职业发展的博客文档',
+    mode: 'production',
+    optimization: {
+    usedExports: true, // 启用树摇
+    },
     theme: 'reco',
     themeConfig: {
         nav: [{'text': '首页', 'link': '/'}, {
