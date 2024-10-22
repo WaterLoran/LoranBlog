@@ -35,19 +35,28 @@ module.exports = {
             }, {'text': 'redis', 'link': '/测试开发/redis/redis中的失效场景'}, {
                 'text': '专项',
                 'link': '/测试开发/专项/B端BPM类软件的升级测试'
+            }, {
+                'text': '优秀实践',
+                'link': '/测试开发/优秀实践/记录coding平台用例迁移到Metersphere'
             }, {'text': '兼容测试', 'link': '/测试开发/兼容测试/数据库兼容性测试'}, {
                 'text': '分布式系统',
                 'link': '/测试开发/分布式系统/分布式系统常用组件'
-            }, {'text': '可靠性测试', 'link': '/测试开发/可靠性测试/双活测试'}, {
+            }, {'text': '可测试性', 'link': '/测试开发/可测试性/从迭代周期看可测试性'}, {
+                'text': '可靠性测试',
+                'link': '/测试开发/可靠性测试/双活测试'
+            }, {'text': '基础设施', 'link': '/测试开发/基础设施/虚拟存储'}, {
                 'text': '抓包',
                 'link': '/测试开发/抓包/burpsuit工具抓包'
             }, {'text': '故事', 'link': '/测试开发/故事/初次用java写工具时引入BUG的思考体会'}, {
                 'text': '杂谈',
                 'link': '/测试开发/杂谈/互联网软件的生命周期'
             }, {'text': '测试平台', 'link': '/测试开发/测试平台/简易测试平台Demo'}, {
-                'text': '负载均衡',
-                'link': '/测试开发/负载均衡/微服务间的负载均衡算法'
-            }, {'text': '资损防控', 'link': '/测试开发/资损防控/基本概念'}]
+                'text': '相关硬件',
+                'link': '/测试开发/相关硬件/各类raid的优缺点'
+            }, {'text': '负载均衡', 'link': '/测试开发/负载均衡/微服务间的负载均衡算法'}, {
+                'text': '资损防控',
+                'link': '/测试开发/资损防控/基本概念'
+            }]
         }, {
             'text': '测试管理',
             'items': [{'text': 'devops', 'link': '/测试管理/devops/devops的发展历史'}, {
@@ -56,10 +65,10 @@ module.exports = {
             }, {'text': '外包管理', 'link': '/测试管理/外包管理/测试经理管理外包团队时的职责'}, {
                 'text': '工具选型',
                 'link': '/测试管理/工具选型/腾讯coding平台'
-            }, {'text': '技术管理', 'link': '/测试管理/技术管理/测试技术管理的工作内容'}, {
+            }, {'text': '技术管理', 'link': '/测试管理/技术管理/用例管理'}, {
                 'text': '研发效能',
                 'link': '/测试管理/研发效能/研发效能的工作内容'
-            }]
+            }, {'text': '管理杂谈', 'link': '/测试管理/管理杂谈/我经历的第一家公司的管理'}]
         }, {
             'text': '自动化框架',
             'items': [{
@@ -411,6 +420,14 @@ module.exports = {
                     'path': '/测试开发/专项/devops过程中如何做全面的回归测试'
                 }]
             }, {
+                'title': '优秀实践',
+                'path': '/测试开发/优秀实践/记录coding平台用例迁移到Metersphere',
+                'collapsable': false,
+                'children': [{
+                    'title': '记录coding平台用例迁移到Metersphere',
+                    'path': '/测试开发/优秀实践/记录coding平台用例迁移到Metersphere'
+                }]
+            }, {
                 'title': '兼容测试',
                 'path': '/测试开发/兼容测试/数据库兼容性测试',
                 'collapsable': false,
@@ -421,6 +438,14 @@ module.exports = {
                 'collapsable': false,
                 'children': [{'title': '分布式系统常用组件', 'path': '/测试开发/分布式系统/分布式系统常用组件'}]
             }, {
+                'title': '可测试性',
+                'path': '/测试开发/可测试性/从迭代周期看可测试性',
+                'collapsable': false,
+                'children': [{
+                    'title': '从迭代周期看可测试性',
+                    'path': '/测试开发/可测试性/从迭代周期看可测试性'
+                }, {'title': '各视角看可测试性', 'path': '/测试开发/可测试性/各视角看可测试性'}]
+            }, {
                 'title': '可靠性测试',
                 'path': '/测试开发/可靠性测试/双活测试',
                 'collapsable': false,
@@ -428,6 +453,11 @@ module.exports = {
                     'title': '双活软件架构',
                     'path': '/测试开发/可靠性测试/双活软件架构'
                 }]
+            }, {
+                'title': '基础设施',
+                'path': '/测试开发/基础设施/虚拟存储',
+                'collapsable': false,
+                'children': [{'title': '虚拟存储', 'path': '/测试开发/基础设施/虚拟存储'}]
             }, {
                 'title': '抓包',
                 'path': '/测试开发/抓包/burpsuit工具抓包',
@@ -485,6 +515,11 @@ module.exports = {
                 'collapsable': false,
                 'children': [{'title': '简易测试平台Demo', 'path': '/测试开发/测试平台/简易测试平台Demo'}]
             }, {
+                'title': '相关硬件',
+                'path': '/测试开发/相关硬件/各类raid的优缺点',
+                'collapsable': false,
+                'children': [{'title': '各类raid的优缺点', 'path': '/测试开发/相关硬件/各类raid的优缺点'}]
+            }, {
                 'title': '负载均衡',
                 'path': '/测试开发/负载均衡/微服务间的负载均衡算法',
                 'collapsable': false,
@@ -541,14 +576,22 @@ module.exports = {
                 'children': [{'title': '腾讯coding平台', 'path': '/测试管理/工具选型/腾讯coding平台'}]
             }, {
                 'title': '技术管理',
-                'path': '/测试管理/技术管理/测试技术管理的工作内容',
+                'path': '/测试管理/技术管理/用例管理',
                 'collapsable': false,
-                'children': [{'title': '测试技术管理的工作内容', 'path': '/测试管理/技术管理/测试技术管理的工作内容'}]
+                'children': [{'title': '用例管理', 'path': '/测试管理/技术管理/用例管理'}]
             }, {
                 'title': '研发效能',
                 'path': '/测试管理/研发效能/研发效能的工作内容',
                 'collapsable': false,
                 'children': [{'title': '研发效能的工作内容', 'path': '/测试管理/研发效能/研发效能的工作内容'}]
+            }, {
+                'title': '管理杂谈',
+                'path': '/测试管理/管理杂谈/我经历的第一家公司的管理',
+                'collapsable': false,
+                'children': [{
+                    'title': '我经历的第一家公司的管理',
+                    'path': '/测试管理/管理杂谈/我经历的第一家公司的管理'
+                }, {'title': '我经历的第二家公司的管理', 'path': '/测试管理/管理杂谈/我经历的第二家公司的管理'}]
             }],
             '/自动化框架/': [{
                 'title': '1.1 快速开始',
