@@ -22,7 +22,7 @@ def generate_nav_sidebar(base_path):
 
     for root, dirs, files in os.walk(base_path):
         # 排除 .vuepress 目录
-        dirs[:] = [d for d in dirs if d != '.vuepress']
+        dirs[:] = [d for d in dirs if d != '.vuepress' and d != 'public']
 
         if not files:
             continue

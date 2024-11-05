@@ -12,9 +12,9 @@ module.exports = {
                 'text': '测试类型',
                 'link': '/App测试/测试类型/交互-测试通知信息'
             }]
-        }, {'text': 'public', 'items': []}, {
+        }, {
             'text': '体系思维',
-            'items': [{
+            'items': [{'text': 'UI测试', 'link': '/体系思维/UI测试/UI类BUG特点分析'}, {
                 'text': '测试基础',
                 'link': '/体系思维/测试基础/APP测试比web测试多出的工作内容'
             }, {'text': '质量内建', 'link': '/体系思维/质量内建/DeskCheck结卡'}, {
@@ -23,7 +23,7 @@ module.exports = {
             }]
         }, {
             'text': '功能测试',
-            'items': [{'text': '理论', 'link': '/功能测试/理论/UI类BUG特点分析'}, {
+            'items': [{'text': '理论', 'link': '/功能测试/理论/为啥开发常常忽略一些交互细节的问题'}, {
                 'text': '经验',
                 'link': '/功能测试/经验/Devops过程中的各种迭代交付问题'
             }, {'text': '软件测试经验与教训', 'link': '/功能测试/软件测试经验与教训/如何制定语境驱动的测试计划'}]
@@ -164,13 +164,18 @@ module.exports = {
                 'collapsable': false,
                 'children': [{'title': '交互-测试通知信息', 'path': '/App测试/测试类型/交互-测试通知信息'}]
             }],
-            '/public/': [{
-                'title': 'LevelProtectionEvaluation',
-                'path': '/public/images/LevelProtectionEvaluation/None',
-                'collapsable': false,
-                'children': []
-            }],
             '/体系思维/': [{
+                'title': 'UI测试',
+                'path': '/体系思维/UI测试/UI类BUG特点分析',
+                'collapsable': false,
+                'children': [{
+                    'title': 'UI类BUG特点分析',
+                    'path': '/体系思维/UI测试/UI类BUG特点分析'
+                }, {
+                    'title': '如何快速判断UI类BUG',
+                    'path': '/体系思维/UI测试/如何快速判断UI类BUG'
+                }, {'title': '如何提高对UI类BUG的敏感性', 'path': '/体系思维/UI测试/如何提高对UI类BUG的敏感性'}]
+            }, {
                 'title': '测试基础',
                 'path': '/体系思维/测试基础/APP测试比web测试多出的工作内容',
                 'collapsable': false,
@@ -257,12 +262,9 @@ module.exports = {
             }],
             '/功能测试/': [{
                 'title': '理论',
-                'path': '/功能测试/理论/UI类BUG特点分析',
+                'path': '/功能测试/理论/为啥开发常常忽略一些交互细节的问题',
                 'collapsable': false,
                 'children': [{
-                    'title': 'UI类BUG特点分析',
-                    'path': '/功能测试/理论/UI类BUG特点分析'
-                }, {
                     'title': '为啥开发常常忽略一些交互细节的问题',
                     'path': '/功能测试/理论/为啥开发常常忽略一些交互细节的问题'
                 }, {
@@ -274,12 +276,6 @@ module.exports = {
                 }, {
                     'title': '基于风险和质量的测试策略',
                     'path': '/功能测试/理论/基于风险和质量的测试策略'
-                }, {
-                    'title': '如何快速判断UI类BUG',
-                    'path': '/功能测试/理论/如何快速判断UI类BUG'
-                }, {
-                    'title': '如何提高对UI类BUG的敏感性',
-                    'path': '/功能测试/理论/如何提高对UI类BUG的敏感性'
                 }, {
                     'title': '如何让测试新手快速具备高质量UI测试的能力',
                     'path': '/功能测试/理论/如何让测试新手快速具备高质量UI测试的能力'
