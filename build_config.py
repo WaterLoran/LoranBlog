@@ -99,6 +99,7 @@ def generate_nav_sidebar(base_path):
             {"text": "BY林子", "link": "https://www.bylinzi.com/"},
             {"text": "code2life", "link": "https://code2life.top/archives/"},
             {"text": "技术圆桌", "link": "https://v2think.com/what-is-leadership"},
+            {"text": "istqb", "link": "https://www.tsting.cn/download/istqb/core"},
         ]
     }, )
 
