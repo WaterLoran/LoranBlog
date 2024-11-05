@@ -51,12 +51,15 @@ module.exports = {
         }, {
             'text': '测试开发',
             'items': [{'text': 'kafka', 'link': '/测试开发/kafka/java使用kafka的简单demo'}, {
-                'text': 'mysql',
-                'link': '/测试开发/mysql/Mysql常用操作'
-            }, {'text': 'redis', 'link': '/测试开发/redis/redis中的失效场景'}, {
-                'text': 'tomcat',
-                'link': '/测试开发/tomcat/Linux后台查看tomcat线程的方法'
-            }, {'text': '专项', 'link': '/测试开发/专项/B端BPM类软件的升级测试'}, {
+                'text': 'LInux运维',
+                'link': '/测试开发/LInux运维/centos更新yum源'
+            }, {'text': 'mysql', 'link': '/测试开发/mysql/Mysql常用操作'}, {
+                'text': 'redis',
+                'link': '/测试开发/redis/redis中的失效场景'
+            }, {'text': 'tomcat', 'link': '/测试开发/tomcat/Linux后台查看tomcat线程的方法'}, {
+                'text': '专项',
+                'link': '/测试开发/专项/B端BPM类软件的升级测试'
+            }, {
                 'text': '优秀实践',
                 'link': '/测试开发/优秀实践/记录coding平台用例迁移到Metersphere'
             }, {'text': '兼容测试', 'link': '/测试开发/兼容测试/数据库兼容性测试'}, {
@@ -74,13 +77,10 @@ module.exports = {
             }, {'text': '杂谈', 'link': '/测试开发/杂谈/互联网软件的生命周期'}, {
                 'text': '测试平台',
                 'link': '/测试开发/测试平台/简易测试平台Demo'
-            }, {'text': '环境部署', 'link': '/测试开发/环境部署/centos更新yum源'}, {
-                'text': '等保测评',
-                'link': '/测试开发/等保测评/如何学习等保测评'
-            }, {'text': '负载均衡', 'link': '/测试开发/负载均衡/微服务间的负载均衡算法'}, {
-                'text': '资损防控',
-                'link': '/测试开发/资损防控/基本概念'
-            }]
+            }, {'text': '等保测评', 'link': '/测试开发/等保测评/如何学习等保测评'}, {
+                'text': '负载均衡',
+                'link': '/测试开发/负载均衡/微服务间的负载均衡算法'
+            }, {'text': '资损防控', 'link': '/测试开发/资损防控/基本概念'}]
         }, {
             'text': '测试管理',
             'items': [{'text': 'devops', 'link': '/测试管理/devops/devops的发展历史'}, {
@@ -553,6 +553,17 @@ module.exports = {
                     'path': '/测试开发/kafka/kafka应用场景'
                 }, {'title': 'python使用kafka的简单demo', 'path': '/测试开发/kafka/python使用kafka的简单demo'}]
             }, {
+                'title': 'LInux运维',
+                'path': '/测试开发/LInux运维/centos更新yum源',
+                'collapsable': false,
+                'children': [{
+                    'title': 'centos更新yum源',
+                    'path': '/测试开发/LInux运维/centos更新yum源'
+                }, {
+                    'title': 'Linux安装nodejs',
+                    'path': '/测试开发/LInux运维/Linux安装nodejs'
+                }, {'title': 'node安装yarn', 'path': '/测试开发/LInux运维/node安装yarn'}]
+            }, {
                 'title': 'mysql',
                 'path': '/测试开发/mysql/Mysql常用操作',
                 'collapsable': false,
@@ -720,11 +731,6 @@ module.exports = {
                 'path': '/测试开发/测试平台/简易测试平台Demo',
                 'collapsable': false,
                 'children': [{'title': '简易测试平台Demo', 'path': '/测试开发/测试平台/简易测试平台Demo'}]
-            }, {
-                'title': '环境部署',
-                'path': '/测试开发/环境部署/centos更新yum源',
-                'collapsable': false,
-                'children': [{'title': 'centos更新yum源', 'path': '/测试开发/环境部署/centos更新yum源'}]
             }, {
                 'title': '等保测评',
                 'path': '/测试开发/等保测评/如何学习等保测评',
