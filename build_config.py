@@ -113,6 +113,7 @@ def main():
     config_content = f"""
 module.exports = {{
     title: '罗兰测试',
+    logo: '/images/logo/猞猁.png',
     description: '各类测试理论, 技能, 经验, 故事, 职业发展的博客文档',
     theme: 'reco',
     themeConfig: {{
