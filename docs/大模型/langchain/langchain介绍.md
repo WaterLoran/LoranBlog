@@ -2,6 +2,8 @@ LangChain 是一个支持构建基于大型语言模型（LLMs）应用的强大
 
 ![langchain介绍](/images/langchain/langchain介绍.png)
 
+[查看PDF](/pdf/王哲-AIAgents在软件测试中的落地实践智能化测试新时代.pdf)
+
 ### 1. **LangChain-Core**
    - **简介**：LangChain-Core 是 LangChain 的核心库，包含了构建 LLM 应用的主要组件和工具。
    - **功能**：包括模型、提示词、链、代理、工具、内存等基础模块（上文中已介绍这些模块的功能），支持构建、管理和扩展复杂的 LLM 应用。
