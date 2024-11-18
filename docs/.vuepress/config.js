@@ -30,10 +30,10 @@ module.exports = {
             }, {'text': '软件测试经验与教训', 'link': '/功能测试/软件测试经验与教训/如何制定语境驱动的测试计划'}]
         }, {
             'text': '大模型',
-            'items': [{'text': 'langchain', 'link': '/大模型/langchain/langchain介绍'}, {
-                'text': '实践经验',
-                'link': '/大模型/实践经验/第一个使用openai的demo'
-            }]
+            'items': [{'text': 'GraphRAG', 'link': '/大模型/GraphRAG/GraphRAG学习资源'}, {
+                'text': 'langchain',
+                'link': '/大模型/langchain/langchain介绍'
+            }, {'text': '实践经验', 'link': '/大模型/实践经验/第一个使用openai的demo'}]
         }, {
             'text': '性能测试',
             'items': [{
@@ -389,6 +389,11 @@ module.exports = {
                 }, {'title': '计划测试策略', 'path': '/功能测试/软件测试经验与教训/计划测试策略'}]
             }],
             '/大模型/': [{
+                'title': 'GraphRAG',
+                'path': '/大模型/GraphRAG/GraphRAG学习资源',
+                'collapsable': false,
+                'children': [{'title': 'GraphRAG学习资源', 'path': '/大模型/GraphRAG/GraphRAG学习资源'}]
+            }, {
                 'title': 'langchain',
                 'path': '/大模型/langchain/langchain介绍',
                 'collapsable': false,
