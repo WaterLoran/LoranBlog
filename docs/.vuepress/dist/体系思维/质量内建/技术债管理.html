@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>技术债管理 | 罗兰测试</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    
+    <meta name="description" content="各类测试理论, 技能, 经验, 故事, 职业发展的博客文档">
+    
+    <link rel="preload" href="/assets/css/0.styles.1be174e1.css" as="style"><link rel="preload" href="/assets/js/app.42268871.js" as="script"><link rel="preload" href="/assets/js/7.61f712eb.js" as="script"><link rel="preload" href="/assets/js/2.762aafaf.js" as="script"><link rel="preload" href="/assets/js/1.f9da18ce.js" as="script"><link rel="preload" href="/assets/js/85.cbc0f9e5.js" as="script"><link rel="prefetch" href="/assets/js/10.62034a12.js"><link rel="prefetch" href="/assets/js/100.e6bdaa3b.js"><link rel="prefetch" href="/assets/js/101.c69e8fe1.js"><link rel="prefetch" href="/assets/js/102.b071d64e.js"><link rel="prefetch" href="/assets/js/103.005d7930.js"><link rel="prefetch" href="/assets/js/104.72c76e64.js"><link rel="prefetch" href="/assets/js/105.efca25c0.js"><link rel="prefetch" href="/assets/js/106.ed9c42ce.js"><link rel="prefetch" href="/assets/js/107.a7564031.js"><link rel="prefetch" href="/assets/js/108.7078c2b0.js"><link rel="prefetch" href="/assets/js/109.37ddaaec.js"><link rel="prefetch" href="/assets/js/11.8c08e450.js"><link rel="prefetch" href="/assets/js/110.93ec03b9.js"><link rel="prefetch" href="/assets/js/111.397aca57.js"><link rel="prefetch" href="/assets/js/112.2f291deb.js"><link rel="prefetch" href="/assets/js/113.b8ac8df1.js"><link rel="prefetch" href="/assets/js/114.245653a9.js"><link rel="prefetch" href="/assets/js/115.93b5c847.js"><link rel="prefetch" href="/assets/js/116.8b94a5f4.js"><link rel="prefetch" href="/assets/js/117.c3c6df10.js"><link rel="prefetch" href="/assets/js/118.a5f73e1d.js"><link rel="prefetch" href="/assets/js/119.eced925c.js"><link rel="prefetch" href="/assets/js/120.d2894d39.js"><link rel="prefetch" href="/assets/js/121.13e49ffe.js"><link rel="prefetch" href="/assets/js/122.4e085aec.js"><link rel="prefetch" href="/assets/js/123.6371bd0b.js"><link rel="prefetch" href="/assets/js/124.e8fb70cc.js"><link rel="prefetch" href="/assets/js/125.217d35f7.js"><link rel="prefetch" href="/assets/js/126.f1043720.js"><link rel="prefetch" href="/assets/js/127.f4b76e2a.js"><link rel="prefetch" href="/assets/js/128.13580cdf.js"><link rel="prefetch" href="/assets/js/129.a7899080.js"><link rel="prefetch" href="/assets/js/130.8b7e5d1a.js"><link rel="prefetch" href="/assets/js/131.18b931e1.js"><link rel="prefetch" href="/assets/js/132.ebe4cb3f.js"><link rel="prefetch" href="/assets/js/133.fcc6ee0f.js"><link rel="prefetch" href="/assets/js/134.c8408d10.js"><link rel="prefetch" href="/assets/js/135.34a334f5.js"><link rel="prefetch" href="/assets/js/136.31b9e16b.js"><link rel="prefetch" href="/assets/js/137.2f26bcd3.js"><link rel="prefetch" href="/assets/js/138.edc1bb74.js"><link rel="prefetch" href="/assets/js/139.7291c98f.js"><link rel="prefetch" href="/assets/js/14.ceec90c0.js"><link rel="prefetch" href="/assets/js/140.143fa935.js"><link rel="prefetch" href="/assets/js/141.198bd0ec.js"><link rel="prefetch" href="/assets/js/142.e325ea49.js"><link rel="prefetch" href="/assets/js/143.e68f6afa.js"><link rel="prefetch" href="/assets/js/144.63e034c5.js"><link rel="prefetch" href="/assets/js/145.b48b7de8.js"><link rel="prefetch" href="/assets/js/146.9a50b338.js"><link rel="prefetch" href="/assets/js/147.a94a11fb.js"><link rel="prefetch" href="/assets/js/148.48173a1a.js"><link rel="prefetch" href="/assets/js/149.477ef8b4.js"><link rel="prefetch" href="/assets/js/15.fcc2afa7.js"><link rel="prefetch" href="/assets/js/150.bcbe5ed6.js"><link rel="prefetch" href="/assets/js/151.784c9819.js"><link rel="prefetch" href="/assets/js/152.47a4046e.js"><link rel="prefetch" href="/assets/js/153.a35fdc2b.js"><link rel="prefetch" href="/assets/js/154.fcf558d8.js"><link rel="prefetch" href="/assets/js/155.779a7b2d.js"><link rel="prefetch" href="/assets/js/156.dbd886ed.js"><link rel="prefetch" href="/assets/js/157.f04304a2.js"><link rel="prefetch" href="/assets/js/158.8fcd87c5.js"><link rel="prefetch" href="/assets/js/159.68140f13.js"><link rel="prefetch" href="/assets/js/16.ea614144.js"><link rel="prefetch" href="/assets/js/160.c3146399.js"><link rel="prefetch" href="/assets/js/161.55b4b65b.js"><link rel="prefetch" href="/assets/js/162.117fd636.js"><link rel="prefetch" href="/assets/js/163.e7bea6a9.js"><link rel="prefetch" href="/assets/js/164.816dcd73.js"><link rel="prefetch" href="/assets/js/165.a93ae5e1.js"><link rel="prefetch" href="/assets/js/166.7f6e74af.js"><link rel="prefetch" href="/assets/js/167.8a272c86.js"><link rel="prefetch" href="/assets/js/168.6187346a.js"><link rel="prefetch" href="/assets/js/169.6f17556e.js"><link rel="prefetch" href="/assets/js/17.60430a97.js"><link rel="prefetch" href="/assets/js/170.4aa7635a.js"><link rel="prefetch" href="/assets/js/171.beb58516.js"><link rel="prefetch" href="/assets/js/172.ea7fe67a.js"><link rel="prefetch" href="/assets/js/173.4357b179.js"><link rel="prefetch" href="/assets/js/174.ad3d923e.js"><link rel="prefetch" href="/assets/js/175.7810bd94.js"><link rel="prefetch" href="/assets/js/176.d8b6349d.js"><link rel="prefetch" href="/assets/js/177.72325204.js"><link rel="prefetch" href="/assets/js/178.73500bed.js"><link rel="prefetch" href="/assets/js/179.fd8101a0.js"><link rel="prefetch" href="/assets/js/18.7f865d3a.js"><link rel="prefetch" href="/assets/js/180.2e6d9a59.js"><link rel="prefetch" href="/assets/js/181.377b8498.js"><link rel="prefetch" href="/assets/js/182.1047f5a7.js"><link rel="prefetch" href="/assets/js/183.c18fba75.js"><link rel="prefetch" href="/assets/js/184.f862c588.js"><link rel="prefetch" href="/assets/js/185.cd2a5252.js"><link rel="prefetch" href="/assets/js/186.b5155938.js"><link rel="prefetch" href="/assets/js/187.9e84e3df.js"><link rel="prefetch" href="/assets/js/188.08b69b59.js"><link rel="prefetch" href="/assets/js/189.1a6361cd.js"><link rel="prefetch" href="/assets/js/19.835678e6.js"><link rel="prefetch" href="/assets/js/190.217b902f.js"><link rel="prefetch" href="/assets/js/191.53f748a7.js"><link rel="prefetch" href="/assets/js/192.a38d1a4d.js"><link rel="prefetch" href="/assets/js/193.b3ef686c.js"><link rel="prefetch" href="/assets/js/194.22ca7031.js"><link rel="prefetch" href="/assets/js/195.0fe1683f.js"><link rel="prefetch" href="/assets/js/196.d05c0797.js"><link rel="prefetch" href="/assets/js/197.e9a418f7.js"><link rel="prefetch" href="/assets/js/198.d4e378a7.js"><link rel="prefetch" href="/assets/js/199.8757b8d3.js"><link rel="prefetch" href="/assets/js/20.298b27df.js"><link rel="prefetch" href="/assets/js/200.c7ca156d.js"><link rel="prefetch" href="/assets/js/201.224aac4b.js"><link rel="prefetch" href="/assets/js/202.11e59315.js"><link rel="prefetch" href="/assets/js/203.dbf9b4b7.js"><link rel="prefetch" href="/assets/js/204.e5463fed.js"><link rel="prefetch" href="/assets/js/205.54b76a5b.js"><link rel="prefetch" href="/assets/js/206.673f4d2d.js"><link rel="prefetch" href="/assets/js/207.9a7d26d0.js"><link rel="prefetch" href="/assets/js/208.70e22156.js"><link rel="prefetch" href="/assets/js/209.7bbfc50d.js"><link rel="prefetch" href="/assets/js/21.ba816ad0.js"><link rel="prefetch" href="/assets/js/210.5c58940e.js"><link rel="prefetch" href="/assets/js/211.12e34779.js"><link rel="prefetch" href="/assets/js/212.82ccc1c4.js"><link rel="prefetch" href="/assets/js/213.25399887.js"><link rel="prefetch" href="/assets/js/214.ac14c405.js"><link rel="prefetch" href="/assets/js/215.150080ce.js"><link rel="prefetch" href="/assets/js/216.c0ddf57d.js"><link rel="prefetch" href="/assets/js/217.182a257e.js"><link rel="prefetch" href="/assets/js/218.c4aa904f.js"><link rel="prefetch" href="/assets/js/219.96fde1cf.js"><link rel="prefetch" href="/assets/js/22.d8b9cb6e.js"><link rel="prefetch" href="/assets/js/220.1b2e505e.js"><link rel="prefetch" href="/assets/js/221.659346c1.js"><link rel="prefetch" href="/assets/js/222.e8986880.js"><link rel="prefetch" href="/assets/js/223.80924a75.js"><link rel="prefetch" href="/assets/js/224.caa53c3b.js"><link rel="prefetch" href="/assets/js/225.3f0f771c.js"><link rel="prefetch" href="/assets/js/226.96badbb2.js"><link rel="prefetch" href="/assets/js/227.8f0c7a0c.js"><link rel="prefetch" href="/assets/js/228.82e6c403.js"><link rel="prefetch" href="/assets/js/229.d1485e6f.js"><link rel="prefetch" href="/assets/js/23.bbf7c19b.js"><link rel="prefetch" href="/assets/js/230.fc40713e.js"><link rel="prefetch" href="/assets/js/231.2664bae7.js"><link rel="prefetch" href="/assets/js/232.d56d0f3f.js"><link rel="prefetch" href="/assets/js/233.23be5088.js"><link rel="prefetch" href="/assets/js/234.d5a02654.js"><link rel="prefetch" href="/assets/js/235.b2ebc48e.js"><link rel="prefetch" href="/assets/js/236.df3e621f.js"><link rel="prefetch" href="/assets/js/237.20fe6992.js"><link rel="prefetch" href="/assets/js/238.9d7e4341.js"><link rel="prefetch" href="/assets/js/239.eb395b14.js"><link rel="prefetch" href="/assets/js/24.c9027b97.js"><link rel="prefetch" href="/assets/js/240.8c862db0.js"><link rel="prefetch" href="/assets/js/241.34e70f51.js"><link rel="prefetch" href="/assets/js/242.539fc76f.js"><link rel="prefetch" href="/assets/js/243.21778121.js"><link rel="prefetch" href="/assets/js/244.26594c61.js"><link rel="prefetch" href="/assets/js/245.d75043c6.js"><link rel="prefetch" href="/assets/js/246.4d08b07a.js"><link rel="prefetch" href="/assets/js/247.73a51de7.js"><link rel="prefetch" href="/assets/js/248.9ff6a1a8.js"><link rel="prefetch" href="/assets/js/249.21ace30e.js"><link rel="prefetch" href="/assets/js/25.8b8f9036.js"><link rel="prefetch" href="/assets/js/250.9762cc3a.js"><link rel="prefetch" href="/assets/js/251.74566a00.js"><link rel="prefetch" href="/assets/js/252.8c6d4a0c.js"><link rel="prefetch" href="/assets/js/253.8f7e49f4.js"><link rel="prefetch" href="/assets/js/254.5288c161.js"><link rel="prefetch" href="/assets/js/255.57f785d2.js"><link rel="prefetch" href="/assets/js/256.d81d1a0a.js"><link rel="prefetch" href="/assets/js/257.ffea31df.js"><link rel="prefetch" href="/assets/js/258.2345908c.js"><link rel="prefetch" href="/assets/js/259.0c079867.js"><link rel="prefetch" href="/assets/js/26.abb05c09.js"><link rel="prefetch" href="/assets/js/260.ca20944f.js"><link rel="prefetch" href="/assets/js/261.131130fc.js"><link rel="prefetch" href="/assets/js/262.25fd28db.js"><link rel="prefetch" href="/assets/js/263.dfaf8204.js"><link rel="prefetch" href="/assets/js/264.19d142e8.js"><link rel="prefetch" href="/assets/js/265.99fd9716.js"><link rel="prefetch" href="/assets/js/266.49ed2f85.js"><link rel="prefetch" href="/assets/js/267.2fc8762b.js"><link rel="prefetch" href="/assets/js/268.ed331adf.js"><link rel="prefetch" href="/assets/js/269.95b2eda0.js"><link rel="prefetch" href="/assets/js/27.37a45053.js"><link rel="prefetch" href="/assets/js/270.885fc215.js"><link rel="prefetch" href="/assets/js/271.635e1089.js"><link rel="prefetch" href="/assets/js/272.eeece61b.js"><link rel="prefetch" href="/assets/js/273.337e07c7.js"><link rel="prefetch" href="/assets/js/274.b8045e74.js"><link rel="prefetch" href="/assets/js/275.e414087f.js"><link rel="prefetch" href="/assets/js/276.6127992c.js"><link rel="prefetch" href="/assets/js/277.f57d1560.js"><link rel="prefetch" href="/assets/js/278.326396ba.js"><link rel="prefetch" href="/assets/js/279.575e509d.js"><link rel="prefetch" href="/assets/js/28.e4dfaa80.js"><link rel="prefetch" href="/assets/js/280.11bf1b85.js"><link rel="prefetch" href="/assets/js/281.5205e88e.js"><link rel="prefetch" href="/assets/js/282.aea8593b.js"><link rel="prefetch" href="/assets/js/283.d1924b2b.js"><link rel="prefetch" href="/assets/js/284.d623362d.js"><link rel="prefetch" href="/assets/js/285.73dde8ae.js"><link rel="prefetch" href="/assets/js/286.2821e469.js"><link rel="prefetch" href="/assets/js/287.ca4df5c9.js"><link rel="prefetch" href="/assets/js/288.aab70b3c.js"><link rel="prefetch" href="/assets/js/289.dace11ae.js"><link rel="prefetch" href="/assets/js/29.ccd310cb.js"><link rel="prefetch" href="/assets/js/290.b5b4b62e.js"><link rel="prefetch" href="/assets/js/291.99424fdf.js"><link rel="prefetch" href="/assets/js/292.62c8987a.js"><link rel="prefetch" href="/assets/js/293.af063135.js"><link rel="prefetch" href="/assets/js/294.9438e925.js"><link rel="prefetch" href="/assets/js/295.dcfb1468.js"><link rel="prefetch" href="/assets/js/296.a77bd2e3.js"><link rel="prefetch" href="/assets/js/297.9ccf6c6b.js"><link rel="prefetch" href="/assets/js/298.e6f52a74.js"><link rel="prefetch" href="/assets/js/299.6ebd8cac.js"><link rel="prefetch" href="/assets/js/3.d9f11622.js"><link rel="prefetch" href="/assets/js/30.af3d1aaa.js"><link rel="prefetch" href="/assets/js/300.15ac98c5.js"><link rel="prefetch" href="/assets/js/301.5c486ade.js"><link rel="prefetch" href="/assets/js/302.f4095a1a.js"><link rel="prefetch" href="/assets/js/303.a6b58c63.js"><link rel="prefetch" href="/assets/js/304.5716150b.js"><link rel="prefetch" href="/assets/js/305.b837d883.js"><link rel="prefetch" href="/assets/js/306.019d3a3c.js"><link rel="prefetch" href="/assets/js/307.a7224e3b.js"><link rel="prefetch" href="/assets/js/31.20eb4691.js"><link rel="prefetch" href="/assets/js/32.daf942c1.js"><link rel="prefetch" href="/assets/js/33.8ebd5f9b.js"><link rel="prefetch" href="/assets/js/34.f67cc0a7.js"><link rel="prefetch" href="/assets/js/35.e7a984b3.js"><link rel="prefetch" href="/assets/js/36.4b2b6b1c.js"><link rel="prefetch" href="/assets/js/37.aa115486.js"><link rel="prefetch" href="/assets/js/38.67fc4f59.js"><link rel="prefetch" href="/assets/js/39.9e0fa965.js"><link rel="prefetch" href="/assets/js/4.b67d26c7.js"><link rel="prefetch" href="/assets/js/40.b7394083.js"><link rel="prefetch" href="/assets/js/41.da0ec951.js"><link rel="prefetch" href="/assets/js/42.da101e79.js"><link rel="prefetch" href="/assets/js/43.450427a5.js"><link rel="prefetch" href="/assets/js/44.99cef559.js"><link rel="prefetch" href="/assets/js/45.40c8e427.js"><link rel="prefetch" href="/assets/js/46.ec9bfdb7.js"><link rel="prefetch" href="/assets/js/47.9910269e.js"><link rel="prefetch" href="/assets/js/48.aac94445.js"><link rel="prefetch" href="/assets/js/49.9a85d38b.js"><link rel="prefetch" href="/assets/js/5.550bb897.js"><link rel="prefetch" href="/assets/js/50.a04d9923.js"><link rel="prefetch" href="/assets/js/51.776bb414.js"><link rel="prefetch" href="/assets/js/52.46c41ccc.js"><link rel="prefetch" href="/assets/js/53.be4f4c0c.js"><link rel="prefetch" href="/assets/js/54.4c23da6f.js"><link rel="prefetch" href="/assets/js/55.6ffdac57.js"><link rel="prefetch" href="/assets/js/56.85845413.js"><link rel="prefetch" href="/assets/js/57.17eb44ee.js"><link rel="prefetch" href="/assets/js/58.a4234b08.js"><link rel="prefetch" href="/assets/js/59.4c78fab9.js"><link rel="prefetch" href="/assets/js/6.db2ac523.js"><link rel="prefetch" href="/assets/js/60.ddd160c5.js"><link rel="prefetch" href="/assets/js/61.52963eaa.js"><link rel="prefetch" href="/assets/js/62.f7f6d6bd.js"><link rel="prefetch" href="/assets/js/63.61165e3a.js"><link rel="prefetch" href="/assets/js/64.c9a1ba8b.js"><link rel="prefetch" href="/assets/js/65.e2b9885a.js"><link rel="prefetch" href="/assets/js/66.6b69bb3b.js"><link rel="prefetch" href="/assets/js/67.6630a22c.js"><link rel="prefetch" href="/assets/js/68.6f5df720.js"><link rel="prefetch" href="/assets/js/69.e960648e.js"><link rel="prefetch" href="/assets/js/70.3ca1841b.js"><link rel="prefetch" href="/assets/js/71.7684efe1.js"><link rel="prefetch" href="/assets/js/72.c5e3a0b0.js"><link rel="prefetch" href="/assets/js/73.a7317b2c.js"><link rel="prefetch" href="/assets/js/74.9cc6eeb1.js"><link rel="prefetch" href="/assets/js/75.ace56b97.js"><link rel="prefetch" href="/assets/js/76.a4b3d359.js"><link rel="prefetch" href="/assets/js/77.1df0a5ab.js"><link rel="prefetch" href="/assets/js/78.cd073cab.js"><link rel="prefetch" href="/assets/js/79.31b49ebc.js"><link rel="prefetch" href="/assets/js/8.9d80bd87.js"><link rel="prefetch" href="/assets/js/80.81cdf0ce.js"><link rel="prefetch" href="/assets/js/81.ef0735ea.js"><link rel="prefetch" href="/assets/js/82.0841e60e.js"><link rel="prefetch" href="/assets/js/83.52b3101d.js"><link rel="prefetch" href="/assets/js/84.d952349e.js"><link rel="prefetch" href="/assets/js/86.11f364e7.js"><link rel="prefetch" href="/assets/js/87.2861d178.js"><link rel="prefetch" href="/assets/js/88.7d41fec6.js"><link rel="prefetch" href="/assets/js/89.f6d35bf7.js"><link rel="prefetch" href="/assets/js/9.74c4bc54.js"><link rel="prefetch" href="/assets/js/90.6d245493.js"><link rel="prefetch" href="/assets/js/91.ce7eb38c.js"><link rel="prefetch" href="/assets/js/92.3193fa4d.js"><link rel="prefetch" href="/assets/js/93.446b29e2.js"><link rel="prefetch" href="/assets/js/94.bace41c5.js"><link rel="prefetch" href="/assets/js/95.c6a97388.js"><link rel="prefetch" href="/assets/js/96.b8a80d87.js"><link rel="prefetch" href="/assets/js/97.3258448a.js"><link rel="prefetch" href="/assets/js/98.3601250a.js"><link rel="prefetch" href="/assets/js/99.e4c8f486.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.a4980e29.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.1be174e1.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-7dd95ae2><div data-v-7dd95ae2><div class="password-shadow password-wrapper-out" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>罗兰测试</h3> <p class="description" data-v-59e6cb88>各类测试理论, 技能, 经验, 故事, 职业发展的博客文档</p> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><!---->
+          
+        <!---->
+        2024
+      </a></span></div></div> <div class="hide" data-v-7dd95ae2><header class="navbar" data-v-7dd95ae2><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">罗兰测试</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      App测试
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/App测试/APP专项/App启动性能分析.html" class="nav-link"><i class="undefined"></i>
+  APP专项
+</a></li><li class="dropdown-item"><!----> <a href="/App测试/APP自动化/App自动化测试.html" class="nav-link"><i class="undefined"></i>
+  APP自动化
+</a></li><li class="dropdown-item"><!----> <a href="/App测试/业务和技术驱动/用商业分析来推进测试.html" class="nav-link"><i class="undefined"></i>
+  业务和技术驱动
+</a></li><li class="dropdown-item"><!----> <a href="/App测试/测试类型/交互-测试通知信息.html" class="nav-link"><i class="undefined"></i>
+  测试类型
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      体系思维
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/体系思维/UI测试/UI类BUG特点分析.html" class="nav-link"><i class="undefined"></i>
+  UI测试
+</a></li><li class="dropdown-item"><!----> <a href="/体系思维/测试基础/APP测试比web测试多出的工作内容.html" class="nav-link"><i class="undefined"></i>
+  测试基础
+</a></li><li class="dropdown-item"><!----> <a href="/体系思维/质量内建/DeskCheck结卡.html" class="nav-link"><i class="undefined"></i>
+  质量内建
+</a></li><li class="dropdown-item"><!----> <a href="/体系思维/质量赋能/整体概览.html" class="nav-link"><i class="undefined"></i>
+  质量赋能
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      功能测试
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/功能测试/理论/为啥开发常常忽略一些交互细节的问题.html" class="nav-link"><i class="undefined"></i>
+  理论
+</a></li><li class="dropdown-item"><!----> <a href="/功能测试/经验/Devops过程中的各种迭代交付问题.html" class="nav-link"><i class="undefined"></i>
+  经验
+</a></li><li class="dropdown-item"><!----> <a href="/功能测试/软件测试经验与教训/如何制定语境驱动的测试计划.html" class="nav-link"><i class="undefined"></i>
+  软件测试经验与教训
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      大模型
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/大模型/GraphRAG/GraphRAG学习资源.html" class="nav-link"><i class="undefined"></i>
+  GraphRAG
+</a></li><li class="dropdown-item"><!----> <a href="/大模型/langchain/langchain介绍.html" class="nav-link"><i class="undefined"></i>
+  langchain
+</a></li><li class="dropdown-item"><!----> <a href="/大模型/向量数据库/FAISS和大模型的关系.html" class="nav-link"><i class="undefined"></i>
+  向量数据库
+</a></li><li class="dropdown-item"><!----> <a href="/大模型/实践经验/第一个使用openai的demo.html" class="nav-link"><i class="undefined"></i>
+  实践经验
+</a></li><li class="dropdown-item"><!----> <a href="/大模型/深度学习/MIMIC-III学习资料.html" class="nav-link"><i class="undefined"></i>
+  深度学习
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      性能测试
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/性能测试/JVM/java中线程池是如何配置的.html" class="nav-link"><i class="undefined"></i>
+  JVM
+</a></li><li class="dropdown-item"><!----> <a href="/性能测试/Litemall性能测试实战/Litemall性能测试实战_00前言.html" class="nav-link"><i class="undefined"></i>
+  Litemall性能测试实战
+</a></li><li class="dropdown-item"><!----> <a href="/性能测试/企业性能测试/9.2.3 性能瓶颈定位思路.html" class="nav-link"><i class="undefined"></i>
+  企业性能测试
+</a></li><li class="dropdown-item"><!----> <a href="/性能测试/全链路压测/为什么全链路压测建议在真实环境去做.html" class="nav-link"><i class="undefined"></i>
+  全链路压测
+</a></li><li class="dropdown-item"><!----> <a href="/性能测试/性能诊断/CPU和负载综合比较分析.html" class="nav-link"><i class="undefined"></i>
+  性能诊断
+</a></li><li class="dropdown-item"><!----> <a href="/性能测试/性能调优/JVM调优大约能有多少性能改善.html" class="nav-link"><i class="undefined"></i>
+  性能调优
+</a></li><li class="dropdown-item"><!----> <a href="/性能测试/杂谈/为啥性能测试工程师成长那么难.html" class="nav-link"><i class="undefined"></i>
+  杂谈
+</a></li><li class="dropdown-item"><!----> <a href="/性能测试/理论/mysql8的性能.html" class="nav-link"><i class="undefined"></i>
+  理论
+</a></li><li class="dropdown-item"><!----> <a href="/性能测试/相关工具/arthas基本功能使用.html" class="nav-link"><i class="undefined"></i>
+  相关工具
+</a></li><li class="dropdown-item"><!----> <a href="/性能测试/经验/一次性能交付测试经历.html" class="nav-link"><i class="undefined"></i>
+  经验
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      测试开发
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/测试开发/kafka/java使用kafka的简单demo.html" class="nav-link"><i class="undefined"></i>
+  kafka
+</a></li><li class="dropdown-item"><!----> <a href="/测试开发/LInux运维/centos更新yum源.html" class="nav-link"><i class="undefined"></i>
+  LInux运维
+</a></li><li class="dropdown-item"><!----> <a href="/测试开发/redis/redis中的失效场景.html" class="nav-link"><i class="undefined"></i>
+  redis
+</a></li><li class="dropdown-item"><!----> <a href="/测试开发/tomcat/Linux后台查看tomcat线程的方法.html" class="nav-link"><i class="undefined"></i>
+  tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/测试开发/专项/B端BPM类软件的升级测试.html" class="nav-link"><i class="undefined"></i>
+  专项
+</a></li><li class="dropdown-item"><!----> <a href="/测试开发/云原生/docker基本使用命令.html" class="nav-link"><i class="undefined"></i>
+  云原生
+</a></li><li class="dropdown-item"><!----> <a href="/测试开发/优秀实践/记录coding平台用例迁移到Metersphere.html" class="nav-link"><i class="undefined"></i>
+  优秀实践
+</a></li><li class="dropdown-item"><!----> <a href="/测试开发/分布式系统/python比对两个不同虚拟机数据库的数据一致性.html" class="nav-link"><i class="undefined"></i>
+  分布式系统
+</a></li><li class="dropdown-item"><!----> <a href="/测试开发/可测试性/从迭代周期看可测试性.html" class="nav-link"><i class="undefined"></i>
+  可测试性
+</a></li><li class="dropdown-item"><!----> <a href="/测试开发/可靠性测试/双活测试.html" class="nav-link"><i class="undefined"></i>
+  可靠性测试
+</a></li><li class="dropdown-item"><!----> <a href="/测试开发/基础硬件/各类raid的优缺点.html" class="nav-link"><i class="undefined"></i>
+  基础硬件
+</a></li><li class="dropdown-item"><!----> <a href="/测试开发/基础设施/iaas基本介绍.html" class="nav-link"><i class="undefined"></i>
+  基础设施
+</a></li><li class="dropdown-item"><!----> <a href="/测试开发/工具或平台/简易测试平台Demo.html" class="nav-link"><i class="undefined"></i>
+  工具或平台
+</a></li><li class="dropdown-item"><!----> <a href="/测试开发/抓包/burpsuit工具抓包.html" class="nav-link"><i class="undefined"></i>
+  抓包
+</a></li><li class="dropdown-item"><!----> <a href="/测试开发/故事/初次用java写工具时引入BUG的思考体会.html" class="nav-link"><i class="undefined"></i>
+  故事
+</a></li><li class="dropdown-item"><!----> <a href="/测试开发/数据库/Mysql常用操作.html" class="nav-link"><i class="undefined"></i>
+  数据库
+</a></li><li class="dropdown-item"><!----> <a href="/测试开发/杂谈/互联网软件的生命周期.html" class="nav-link"><i class="undefined"></i>
+  杂谈
+</a></li><li class="dropdown-item"><!----> <a href="/测试开发/等保测评/如何学习等保测评.html" class="nav-link"><i class="undefined"></i>
+  等保测评
+</a></li><li class="dropdown-item"><!----> <a href="/测试开发/负载均衡/微服务间的负载均衡算法.html" class="nav-link"><i class="undefined"></i>
+  负载均衡
+</a></li><li class="dropdown-item"><!----> <a href="/测试开发/资损防控/基本概念.html" class="nav-link"><i class="undefined"></i>
+  资损防控
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      测试管理
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/测试管理/devops/devops的发展历史.html" class="nav-link"><i class="undefined"></i>
+  devops
+</a></li><li class="dropdown-item"><!----> <a href="/测试管理/代码管理/好的代码分支应该有什么效果.html" class="nav-link"><i class="undefined"></i>
+  代码管理
+</a></li><li class="dropdown-item"><!----> <a href="/测试管理/团队管理/10人的测试团队的梯度建设.html" class="nav-link"><i class="undefined"></i>
+  团队管理
+</a></li><li class="dropdown-item"><!----> <a href="/测试管理/外包管理/测试经理管理外包团队时的职责.html" class="nav-link"><i class="undefined"></i>
+  外包管理
+</a></li><li class="dropdown-item"><!----> <a href="/测试管理/工具选型/腾讯coding平台.html" class="nav-link"><i class="undefined"></i>
+  工具选型
+</a></li><li class="dropdown-item"><!----> <a href="/测试管理/技术管理/用例管理.html" class="nav-link"><i class="undefined"></i>
+  技术管理
+</a></li><li class="dropdown-item"><!----> <a href="/测试管理/研发效能/研发效能的工作内容.html" class="nav-link"><i class="undefined"></i>
+  研发效能
+</a></li><li class="dropdown-item"><!----> <a href="/测试管理/管理杂谈/我经历的第一家公司的管理.html" class="nav-link"><i class="undefined"></i>
+  管理杂谈
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      自动化测试
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/自动化测试/测试工具/Allure使用指南.html" class="nav-link"><i class="undefined"></i>
+  测试工具
+</a></li><li class="dropdown-item"><!----> <a href="/自动化测试/理论/UI自动化的核心.html" class="nav-link"><i class="undefined"></i>
+  理论
+</a></li><li class="dropdown-item"><!----> <a href="/自动化测试/经验/一次失败的自动化经历.html" class="nav-link"><i class="undefined"></i>
+  经验
+</a></li><li class="dropdown-item"><!----> <a href="/自动化测试/自动化框架/1.1.1 通过拉取github项目快速开始.html" class="nav-link"><i class="undefined"></i>
+  自动化框架
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      优质博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://tech.meituan.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  美团技术团队
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://pdai.tech/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Java全栈知识体系
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://www.bylinzi.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  BY林子
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://code2life.top/archives/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  code2life
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://v2think.com/what-is-leadership" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  技术圆桌
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://www.tsting.cn/download/istqb/core" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  istqb
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-7dd95ae2></div> <aside class="sidebar" data-v-7dd95ae2><div class="personal-info-wrapper" data-v-1fad0c41 data-v-7dd95ae2><!----> <!----> <div class="num" data-v-1fad0c41><div data-v-1fad0c41><h3 data-v-1fad0c41>94</h3> <h6 data-v-1fad0c41>Articles</h6></div> <div data-v-1fad0c41><h3 data-v-1fad0c41>0</h3> <h6 data-v-1fad0c41>Tags</h6></div></div> <ul class="social-links" data-v-1fad0c41></ul> <hr data-v-1fad0c41></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      App测试
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/App测试/APP专项/App启动性能分析.html" class="nav-link"><i class="undefined"></i>
+  APP专项
+</a></li><li class="dropdown-item"><!----> <a href="/App测试/APP自动化/App自动化测试.html" class="nav-link"><i class="undefined"></i>
+  APP自动化
+</a></li><li class="dropdown-item"><!----> <a href="/App测试/业务和技术驱动/用商业分析来推进测试.html" class="nav-link"><i class="undefined"></i>
+  业务和技术驱动
+</a></li><li class="dropdown-item"><!----> <a href="/App测试/测试类型/交互-测试通知信息.html" class="nav-link"><i class="undefined"></i>
+  测试类型
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      体系思维
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/体系思维/UI测试/UI类BUG特点分析.html" class="nav-link"><i class="undefined"></i>
+  UI测试
+</a></li><li class="dropdown-item"><!----> <a href="/体系思维/测试基础/APP测试比web测试多出的工作内容.html" class="nav-link"><i class="undefined"></i>
+  测试基础
+</a></li><li class="dropdown-item"><!----> <a href="/体系思维/质量内建/DeskCheck结卡.html" class="nav-link"><i class="undefined"></i>
+  质量内建
+</a></li><li class="dropdown-item"><!----> <a href="/体系思维/质量赋能/整体概览.html" class="nav-link"><i class="undefined"></i>
+  质量赋能
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      功能测试
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/功能测试/理论/为啥开发常常忽略一些交互细节的问题.html" class="nav-link"><i class="undefined"></i>
+  理论
+</a></li><li class="dropdown-item"><!----> <a href="/功能测试/经验/Devops过程中的各种迭代交付问题.html" class="nav-link"><i class="undefined"></i>
+  经验
+</a></li><li class="dropdown-item"><!----> <a href="/功能测试/软件测试经验与教训/如何制定语境驱动的测试计划.html" class="nav-link"><i class="undefined"></i>
+  软件测试经验与教训
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      大模型
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/大模型/GraphRAG/GraphRAG学习资源.html" class="nav-link"><i class="undefined"></i>
+  GraphRAG
+</a></li><li class="dropdown-item"><!----> <a href="/大模型/langchain/langchain介绍.html" class="nav-link"><i class="undefined"></i>
+  langchain
+</a></li><li class="dropdown-item"><!----> <a href="/大模型/向量数据库/FAISS和大模型的关系.html" class="nav-link"><i class="undefined"></i>
+  向量数据库
+</a></li><li class="dropdown-item"><!----> <a href="/大模型/实践经验/第一个使用openai的demo.html" class="nav-link"><i class="undefined"></i>
+  实践经验
+</a></li><li class="dropdown-item"><!----> <a href="/大模型/深度学习/MIMIC-III学习资料.html" class="nav-link"><i class="undefined"></i>
+  深度学习
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      性能测试
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/性能测试/JVM/java中线程池是如何配置的.html" class="nav-link"><i class="undefined"></i>
+  JVM
+</a></li><li class="dropdown-item"><!----> <a href="/性能测试/Litemall性能测试实战/Litemall性能测试实战_00前言.html" class="nav-link"><i class="undefined"></i>
+  Litemall性能测试实战
+</a></li><li class="dropdown-item"><!----> <a href="/性能测试/企业性能测试/9.2.3 性能瓶颈定位思路.html" class="nav-link"><i class="undefined"></i>
+  企业性能测试
+</a></li><li class="dropdown-item"><!----> <a href="/性能测试/全链路压测/为什么全链路压测建议在真实环境去做.html" class="nav-link"><i class="undefined"></i>
+  全链路压测
+</a></li><li class="dropdown-item"><!----> <a href="/性能测试/性能诊断/CPU和负载综合比较分析.html" class="nav-link"><i class="undefined"></i>
+  性能诊断
+</a></li><li class="dropdown-item"><!----> <a href="/性能测试/性能调优/JVM调优大约能有多少性能改善.html" class="nav-link"><i class="undefined"></i>
+  性能调优
+</a></li><li class="dropdown-item"><!----> <a href="/性能测试/杂谈/为啥性能测试工程师成长那么难.html" class="nav-link"><i class="undefined"></i>
+  杂谈
+</a></li><li class="dropdown-item"><!----> <a href="/性能测试/理论/mysql8的性能.html" class="nav-link"><i class="undefined"></i>
+  理论
+</a></li><li class="dropdown-item"><!----> <a href="/性能测试/相关工具/arthas基本功能使用.html" class="nav-link"><i class="undefined"></i>
+  相关工具
+</a></li><li class="dropdown-item"><!----> <a href="/性能测试/经验/一次性能交付测试经历.html" class="nav-link"><i class="undefined"></i>
+  经验
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      测试开发
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/测试开发/kafka/java使用kafka的简单demo.html" class="nav-link"><i class="undefined"></i>
+  kafka
+</a></li><li class="dropdown-item"><!----> <a href="/测试开发/LInux运维/centos更新yum源.html" class="nav-link"><i class="undefined"></i>
+  LInux运维
+</a></li><li class="dropdown-item"><!----> <a href="/测试开发/redis/redis中的失效场景.html" class="nav-link"><i class="undefined"></i>
+  redis
+</a></li><li class="dropdown-item"><!----> <a href="/测试开发/tomcat/Linux后台查看tomcat线程的方法.html" class="nav-link"><i class="undefined"></i>
+  tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/测试开发/专项/B端BPM类软件的升级测试.html" class="nav-link"><i class="undefined"></i>
+  专项
+</a></li><li class="dropdown-item"><!----> <a href="/测试开发/云原生/docker基本使用命令.html" class="nav-link"><i class="undefined"></i>
+  云原生
+</a></li><li class="dropdown-item"><!----> <a href="/测试开发/优秀实践/记录coding平台用例迁移到Metersphere.html" class="nav-link"><i class="undefined"></i>
+  优秀实践
+</a></li><li class="dropdown-item"><!----> <a href="/测试开发/分布式系统/python比对两个不同虚拟机数据库的数据一致性.html" class="nav-link"><i class="undefined"></i>
+  分布式系统
+</a></li><li class="dropdown-item"><!----> <a href="/测试开发/可测试性/从迭代周期看可测试性.html" class="nav-link"><i class="undefined"></i>
+  可测试性
+</a></li><li class="dropdown-item"><!----> <a href="/测试开发/可靠性测试/双活测试.html" class="nav-link"><i class="undefined"></i>
+  可靠性测试
+</a></li><li class="dropdown-item"><!----> <a href="/测试开发/基础硬件/各类raid的优缺点.html" class="nav-link"><i class="undefined"></i>
+  基础硬件
+</a></li><li class="dropdown-item"><!----> <a href="/测试开发/基础设施/iaas基本介绍.html" class="nav-link"><i class="undefined"></i>
+  基础设施
+</a></li><li class="dropdown-item"><!----> <a href="/测试开发/工具或平台/简易测试平台Demo.html" class="nav-link"><i class="undefined"></i>
+  工具或平台
+</a></li><li class="dropdown-item"><!----> <a href="/测试开发/抓包/burpsuit工具抓包.html" class="nav-link"><i class="undefined"></i>
+  抓包
+</a></li><li class="dropdown-item"><!----> <a href="/测试开发/故事/初次用java写工具时引入BUG的思考体会.html" class="nav-link"><i class="undefined"></i>
+  故事
+</a></li><li class="dropdown-item"><!----> <a href="/测试开发/数据库/Mysql常用操作.html" class="nav-link"><i class="undefined"></i>
+  数据库
+</a></li><li class="dropdown-item"><!----> <a href="/测试开发/杂谈/互联网软件的生命周期.html" class="nav-link"><i class="undefined"></i>
+  杂谈
+</a></li><li class="dropdown-item"><!----> <a href="/测试开发/等保测评/如何学习等保测评.html" class="nav-link"><i class="undefined"></i>
+  等保测评
+</a></li><li class="dropdown-item"><!----> <a href="/测试开发/负载均衡/微服务间的负载均衡算法.html" class="nav-link"><i class="undefined"></i>
+  负载均衡
+</a></li><li class="dropdown-item"><!----> <a href="/测试开发/资损防控/基本概念.html" class="nav-link"><i class="undefined"></i>
+  资损防控
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      测试管理
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/测试管理/devops/devops的发展历史.html" class="nav-link"><i class="undefined"></i>
+  devops
+</a></li><li class="dropdown-item"><!----> <a href="/测试管理/代码管理/好的代码分支应该有什么效果.html" class="nav-link"><i class="undefined"></i>
+  代码管理
+</a></li><li class="dropdown-item"><!----> <a href="/测试管理/团队管理/10人的测试团队的梯度建设.html" class="nav-link"><i class="undefined"></i>
+  团队管理
+</a></li><li class="dropdown-item"><!----> <a href="/测试管理/外包管理/测试经理管理外包团队时的职责.html" class="nav-link"><i class="undefined"></i>
+  外包管理
+</a></li><li class="dropdown-item"><!----> <a href="/测试管理/工具选型/腾讯coding平台.html" class="nav-link"><i class="undefined"></i>
+  工具选型
+</a></li><li class="dropdown-item"><!----> <a href="/测试管理/技术管理/用例管理.html" class="nav-link"><i class="undefined"></i>
+  技术管理
+</a></li><li class="dropdown-item"><!----> <a href="/测试管理/研发效能/研发效能的工作内容.html" class="nav-link"><i class="undefined"></i>
+  研发效能
+</a></li><li class="dropdown-item"><!----> <a href="/测试管理/管理杂谈/我经历的第一家公司的管理.html" class="nav-link"><i class="undefined"></i>
+  管理杂谈
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      自动化测试
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/自动化测试/测试工具/Allure使用指南.html" class="nav-link"><i class="undefined"></i>
+  测试工具
+</a></li><li class="dropdown-item"><!----> <a href="/自动化测试/理论/UI自动化的核心.html" class="nav-link"><i class="undefined"></i>
+  理论
+</a></li><li class="dropdown-item"><!----> <a href="/自动化测试/经验/一次失败的自动化经历.html" class="nav-link"><i class="undefined"></i>
+  经验
+</a></li><li class="dropdown-item"><!----> <a href="/自动化测试/自动化框架/1.1.1 通过拉取github项目快速开始.html" class="nav-link"><i class="undefined"></i>
+  自动化框架
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      优质博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://tech.meituan.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  美团技术团队
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://pdai.tech/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Java全栈知识体系
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://www.bylinzi.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  BY林子
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://code2life.top/archives/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  code2life
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://v2think.com/what-is-leadership" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  技术圆桌
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://www.tsting.cn/download/istqb/core" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  istqb
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav> <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><a href="/体系思维/UI测试/UI类BUG特点分析" class="sidebar-heading clickable"><span>UI测试</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/体系思维/UI测试/UI类BUG特点分析.html" class="sidebar-link">UI类BUG特点分析</a></li><li><a href="/体系思维/UI测试/如何快速判断UI类BUG.html" class="sidebar-link">如何快速判断UI类BUG</a></li><li><a href="/体系思维/UI测试/如何提高对UI类BUG的敏感性.html" class="sidebar-link">如何提高对UI类BUG的敏感性</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/体系思维/测试基础/APP测试比web测试多出的工作内容" class="sidebar-heading clickable"><span>测试基础</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/体系思维/测试基础/APP测试比web测试多出的工作内容.html" class="sidebar-link">APP测试比web测试多出的工作内容</a></li><li><a href="/体系思维/测试基础/功能测试用例的执行.html" class="sidebar-link">功能测试用例的执行</a></li><li><a href="/体系思维/测试基础/可用性测试用例的执行.html" class="sidebar-link">可用性测试用例的执行</a></li><li><a href="/体系思维/测试基础/可靠性测试用例的执行.html" class="sidebar-link">可靠性测试用例的执行</a></li><li><a href="/体系思维/测试基础/因果图分析.html" class="sidebar-link">因果图分析</a></li><li><a href="/体系思维/测试基础/如何定位所发现的问题.html" class="sidebar-link">如何定位所发现的问题</a></li><li><a href="/体系思维/测试基础/如何拆分大系统成多个小模块.html" class="sidebar-link">如何拆分大系统成多个小模块</a></li><li><a href="/体系思维/测试基础/如何提交高质量的BUG.html" class="sidebar-link">如何提交高质量的BUG</a></li><li><a href="/体系思维/测试基础/如何高质量的回归BUG.html" class="sidebar-link">如何高质量的回归BUG</a></li><li><a href="/体系思维/测试基础/性能测试用例的执行.html" class="sidebar-link">性能测试用例的执行</a></li><li><a href="/体系思维/测试基础/测试方案-测试策略-测试计划.html" class="sidebar-link">测试方案-测试策略-测试计划</a></li><li><a href="/体系思维/测试基础/测试用例评审.html" class="sidebar-link">测试用例评审</a></li><li><a href="/体系思维/测试基础/测试设计方法概览.html" class="sidebar-link">测试设计方法概览</a></li><li><a href="/体系思维/测试基础/质量维度.html" class="sidebar-link">质量维度</a></li><li><a href="/体系思维/测试基础/软件中性能和可靠性的联系.html" class="sidebar-link">软件中性能和可靠性的联系</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/体系思维/质量内建/DeskCheck结卡" class="sidebar-heading clickable open"><span>质量内建</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/体系思维/质量内建/DeskCheck结卡.html" class="sidebar-link">DeskCheck结卡</a></li><li><a href="/体系思维/质量内建/客户验收.html" class="sidebar-link">客户验收</a></li><li><a href="/体系思维/质量内建/开卡.html" class="sidebar-link">开卡</a></li><li><a href="/体系思维/质量内建/技术债管理.html" class="active sidebar-link">技术债管理</a></li><li><a href="/体系思维/质量内建/持续集成.html" class="sidebar-link">持续集成</a></li><li><a href="/体系思维/质量内建/持续集成的相关工具.html" class="sidebar-link">持续集成的相关工具</a></li><li><a href="/体系思维/质量内建/整体概览.html" class="sidebar-link">整体概览</a></li><li><a href="/体系思维/质量内建/日志评审.html" class="sidebar-link">日志评审</a></li><li><a href="/体系思维/质量内建/生产故障分析与复盘.html" class="sidebar-link">生产故障分析与复盘</a></li><li><a href="/体系思维/质量内建/生产环境支持.html" class="sidebar-link">生产环境支持</a></li><li><a href="/体系思维/质量内建/生产质量状态报告.html" class="sidebar-link">生产质量状态报告</a></li><li><a href="/体系思维/质量内建/用户行为分析.html" class="sidebar-link">用户行为分析</a></li><li><a href="/体系思维/质量内建/用户行为分析相关工作内容与技术栈.html" class="sidebar-link">用户行为分析相关工作内容与技术栈</a></li><li><a href="/体系思维/质量内建/需求澄清.html" class="sidebar-link">需求澄清</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/体系思维/质量赋能/整体概览" class="sidebar-heading clickable"><span>质量赋能</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/体系思维/质量赋能/整体概览.html" class="sidebar-link">整体概览</a></li><li><a href="/体系思维/质量赋能/测试团队拓扑.html" class="sidebar-link">测试团队拓扑</a></li><li><a href="/体系思维/质量赋能/测试沟通协作.html" class="sidebar-link">测试沟通协作</a></li><li><a href="/体系思维/质量赋能/测试组织架构.html" class="sidebar-link">测试组织架构</a></li><li><a href="/体系思维/质量赋能/高效率协同因素的关系分析.html" class="sidebar-link">高效率协同因素的关系分析</a></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88></h3> <!----> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><!---->
+          
+        <!---->
+        2024
+      </a></span></div></div> <div data-v-7dd95ae2><div data-v-7dd95ae2><main class="page" style="padding-right:0;"><section style="display:;"><div class="page-title"><h1 class="title">技术债管理</h1> <div data-v-8a445198><!----> <!----> <!----> <!----></div></div> <div class="theme-reco-content content__default"><h1 id="技术债管理"><a href="#技术债管理" class="header-anchor">#</a> 技术债管理</h1> <h2 id="定义"><a href="#定义" class="header-anchor">#</a> 定义</h2> <p>技术负债（英语：Technical debt），又译技术债，也称为设计负债（design debt）、代码负债（code debt），是编程及软件工程中的借鉴了财务债务的系统隐喻。</p> <h2 id="误区"><a href="#误区" class="header-anchor">#</a> 误区</h2> <ol><li>技术债务不是坏代码
+好的代码或许是整洁的代码, 也可以概括为破事你在未来做出特定决策的代码, 他保留了选择的余地. 而坏代码则不留余地, 还会强加上一些原本不存在的约束.
+理论上, 不存在&quot;糟糕的开发者&quot;编写的&quot;坏代码&quot;, 至少在生产项目中没有(这正是diamante审查的作用). 或者说大多数&quot;坏代码&quot;出自于受到约束影响的优秀开发者.</li> <li>技术债务是错误的
+技术债务和金融业务一样部分对错好坏. 只是在非理想的情况下(没有足够的现金)来满足需求, 算是一个产品开发工具箱中的一个有效工具</li> <li>构建完成就万事大吉</li></ol> <h2 id="表现特点"><a href="#表现特点" class="header-anchor">#</a> 表现特点</h2> <ol><li>和金融债务一样, 是一种透支行为, 通过牺牲未来满足当下的一些需求, 类比于金融, 技术债务也有利息, 随着时间利滚利, 就会成为一个埋在项目中的定时炸弹.</li> <li>本质是产品的结构阻碍了进步, 比如无法轻易重构, 组件之间的依赖性过多, 缺陷太多, 结构不良, 难以理解, 难以改变</li> <li>影响后果比如会有, 降低员工士气, 因为遗留问题导致人才流失, 产品质量下降导致客户满意度下降, 限制创新能力</li> <li>可以分为2维度, 4象限, 即(有意的-无心的)维度, 和(草率的-慎重的)2维度</li></ol> <h2 id="如何产生的"><a href="#如何产生的" class="header-anchor">#</a> 如何产生的</h2> <table><thead><tr><th>原因点</th> <th>描述</th></tr></thead> <tbody><tr><td>业务压力</td> <td>为了满足业务的快速要求，在必要的修改并没有完成时就匆匆发布，这些未完成的修改就形成了技术负债。</td></tr> <tr><td>缺少过程和理解</td> <td>业务人员不清楚不理解技术负债的概念，在决策时就不会考虑到其带来的影响。</td></tr> <tr><td>模块之间解耦不够</td> <td>功能没有模块化，软件柔性不够，不足适应业务变化的要求。</td></tr> <tr><td>缺少配套的自动化测试</td> <td>导致鼓励快速而风险很大的“创可贴”式的BUG修复。</td></tr> <tr><td>缺少必要文档</td> <td>需求和代码都没有必要的支撑性文档或注释。</td></tr> <tr><td>缺少协作</td> <td>组织中的知识共享和业务效率较低，或者初级开发者缺少必要的指导。</td></tr> <tr><td>重构延迟</td> <td>在开发的过程中，某些部分的代码会变得难以控制，这时候就需要进行重构，以适应将来的需求变化。重构越是推迟，这些已有的代码被使用的越多，形成的技术负债就越多，直到重构完成。</td></tr> <tr><td>不遵循标准或最佳实践</td> <td>忽略了已有的业界标准、框架、技术和最佳实践。</td></tr> <tr><td>缺少相关技能</td> <td>开发人员有时候技能缺失，并不知道如何编写优雅的代码。</td></tr></tbody></table> <h3 id="总结"><a href="#总结" class="header-anchor">#</a> 总结:</h3> <p>有两个来源:</p> <ol><li>决策的权衡利弊和取舍(鲁莽vs谨慎)</li> <li>指定和执行决策时具备(或者缺乏)的知识, 即有意或无意</li></ol> <h3 id="开发的思考表现特点"><a href="#开发的思考表现特点" class="header-anchor">#</a> 开发的思考表现特点</h3> <p>有意且鲁莽: 我们没有时间做设计</p> <p>有意且谨慎: 我们必须先交付, 在处理追求速度所导致的结果</p> <p>无意且鲁莽: 什么是分层?</p> <p>无意且谨慎: 我们现在知道该怎么做了</p> <h2 id="技术债务的类型"><a href="#技术债务的类型" class="header-anchor">#</a> 技术债务的类型</h2> <p>根据技术债务的来源和性质，可以将其分为不同的类型：</p> <h4 id="_1-设计债务"><a href="#_1-设计债务" class="header-anchor">#</a> 1. 设计债务</h4> <p>设计层面的技术债务包括系统架构不合理、模块耦合度过高、缺乏清晰的抽象和设计模式等。这类债务的积累会导致系统难以扩展或维护。</p> <h4 id="_2-代码债务"><a href="#_2-代码债务" class="header-anchor">#</a> 2. 代码债务</h4> <p>代码债务是由于不良编码实践而产生的，比如代码重复、冗余代码、命名混乱、注释不足或没有遵循代码标准。这会使代码难以阅读、调试和修改。</p> <h4 id="_3-测试债务"><a href="#_3-测试债务" class="header-anchor">#</a> 3. 测试债务</h4> <p>测试债务是指由于缺乏足够的测试覆盖而导致的问题。这可能包括单元测试、集成测试或自动化测试不足，导致后续系统迭代中缺乏信心，容易引发回归 Bug。</p> <h4 id="_4-文档债务"><a href="#_4-文档债务" class="header-anchor">#</a> 4. 文档债务</h4> <p>文档不足或过时是技术债务的一个常见形式。缺乏详细的设计文档、API 文档或用户手册会导致团队在维护和扩展系统时需要更多时间去理解已有系统。</p> <h4 id="_5-基础设施债务"><a href="#_5-基础设施债务" class="header-anchor">#</a> 5. 基础设施债务</h4> <p>基础设施层面的债务包括使用老旧的硬件或软件版本、依赖过时的框架或库等，这些问题可能会导致系统的性能或安全性问题，增加技术支持的复杂性。</p> <h2 id="优先级排序技术"><a href="#优先级排序技术" class="header-anchor">#</a> 优先级排序技术</h2> <p><strong>ICE 和 RICE 得分</strong></p> <p>你最终会得到许多不同大小和影响的项目，然后变得非常混乱。ICE 有助于为这种混乱带来秩序，它可以通过一种系统性的方法来评估这些项目，并创建一个单一数字表示它们的优先级，你可以简单地借此对它们进行排序。</p> <p>ICE 代表影响（Impact）、信心（Confidence）和努力程度（Ease/Effort）。RICE 中的 R 代表影响范围（Reach）。</p> <p>对于其中每一个因素，团队在一组数值点上达成一致，例如：Massive = 3 High = 2, Medium = 1, Low = 0.5, Minimal = 0.25</p> <p><strong>影响</strong> —— 解决此问题会对客户产生什么影响（记住，客户也可能是内部的！）——或者，在考虑风险时，解决此问题不会产生什么影响？</p> <p><strong>信心</strong> —— 你对影响（以及可选的努力程度）的估计有多大信心？</p> <p><strong>努力程度</strong> —— 努力程度通常更容易谈论——解决问题需要付出多少努力？请记住，这是一个相对指标，只能与当前批次中的其它问题进行比较。</p> <p><strong>响应范围</strong> —— 这将影响多少人？100%的客户群？还是只有某一特定角色的客户？</p> <p>重要的是，要了解这些分数仅在本地相对环境中有意义，不应跨域进行比较。</p> <p>一旦你有了这些数字，计算就很容易了：</p> <p><strong>RICE 得分 = (Impact x Confidence) / Effort or Impact x Confidence x Ease</strong></p> <h2 id="如何削减技术债务"><a href="#如何削减技术债务" class="header-anchor">#</a> 如何削减技术债务</h2> <h3 id="技术债可视化"><a href="#技术债可视化" class="header-anchor">#</a> 技术债可视化</h3> <p>尽可能公开技术债, 与利益相关方一起权衡利弊, 协商相关解决方案, 相互理解平等沟通. 记录为组织资产, 分为短期技术债和长期技术债. 还可以跟踪开发开发速率来体现技术债对产品的影响</p> <h3 id="不同的债要对症下药"><a href="#不同的债要对症下药" class="header-anchor">#</a> 不同的债要对症下药</h3> <ol><li>确定已知技术债必须还。</li> <li>发现偶然技术债，立即还。</li> <li>每个冲刺确定一定数量的已知技术债作为目标技术债，在当前冲刺中偿还。</li> <li>无需偿还的技术债是行将就木的产品、一次性原型和短命产品。</li></ol> <h3 id="为技术债分配专用力量"><a href="#为技术债分配专用力量" class="header-anchor">#</a> <strong>为技术债分配专用力量</strong></h3> <p>有些团队将一定比例的工期时间用于各种类型的工作。一个常见的设置是 70%用于功能开发，20%用于技术债，10%用于学习/实验。</p> <h3 id="每段工期都要解决-n-个技术债问题"><a href="#每段工期都要解决-n-个技术债问题" class="header-anchor">#</a> <strong>每段工期都要解决 N 个技术债问题</strong></h3> <p>相当于是一种目标驱动的方法</p> <h3 id="将比较重要的技术债务当作项目"><a href="#将比较重要的技术债务当作项目" class="header-anchor">#</a> <strong>将比较重要的技术债务当作项目</strong></h3> <p>技术债务的形式是比较长的项目，实际上需要相应的规划和执行。
+另外一方面, 这也是一种在KPI管理下的有效分工</p> <h3 id="将中等大小的技术债当作涉及该系统或代码库的下一个项目的一部分"><a href="#将中等大小的技术债当作涉及该系统或代码库的下一个项目的一部分" class="header-anchor">#</a> <strong>将中等大小的技术债当作涉及该系统或代码库的下一个项目的一部分</strong></h3> <h2 id="如何避免产生技术债务"><a href="#如何避免产生技术债务" class="header-anchor">#</a> 如何避免产生技术债务</h2> <ol><li><p>避免使用过时的技术</p></li> <li><p>参考敏捷实践</p></li> <li><p>遵循代码规范</p></li></ol> <h2 id="参考文章"><a href="#参考文章" class="header-anchor">#</a> 参考文章:</h2> <p><a href="https://www.infoq.cn/article/hth2qbjhf2oco1cgjqqd" target="_blank" rel="noopener noreferrer">如何领导团队做好技术债管理<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><a href="https://utgd.net/article/20789" target="_blank" rel="noopener noreferrer">为什么软件开发总有“技术债”？你需要了解管理技术债务的策略与方法<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><a href="https://queue.acm.org/detail.cfm?id=2168798" target="_blank" rel="noopener noreferrer">Managing Technical Debt<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><a href="https://ligai.cn/blog/%E7%A0%94%E5%8F%91%E7%AE%A1%E7%90%86/1528.html" target="_blank" rel="noopener noreferrer">研发团队的「技术债」如何进行量化管理？<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></div></section> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/体系思维/质量内建/开卡.html" class="prev">
+          开卡
+        </a></span> <span class="next"><a href="/体系思维/质量内建/持续集成.html">
+          持续集成
+        </a></span></p></div> <div class="comments-wrapper"><!----></div></main></div> <!----></div> <ul class="sub-sidebar sub-sidebar-wrapper" style="width:0;" data-v-b57cc07c data-v-7dd95ae2></ul></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/assets/js/app.42268871.js" defer></script><script src="/assets/js/7.61f712eb.js" defer></script><script src="/assets/js/2.762aafaf.js" defer></script><script src="/assets/js/1.f9da18ce.js" defer></script><script src="/assets/js/85.cbc0f9e5.js" defer></script>
+  </body>
+</html>
