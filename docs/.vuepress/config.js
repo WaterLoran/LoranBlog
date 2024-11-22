@@ -33,7 +33,10 @@ module.exports = {
             'items': [{'text': 'GraphRAG', 'link': '/大模型/GraphRAG/GraphRAG学习资源'}, {
                 'text': 'langchain',
                 'link': '/大模型/langchain/langchain介绍'
-            }, {'text': '实践经验', 'link': '/大模型/实践经验/第一个使用openai的demo'}]
+            }, {'text': '向量数据库', 'link': '/大模型/向量数据库/FAISS和大模型的关系'}, {
+                'text': '实践经验',
+                'link': '/大模型/实践经验/第一个使用openai的demo'
+            }, {'text': '深度学习', 'link': '/大模型/深度学习/MIMIC-III学习资料'}]
         }, {
             'text': '性能测试',
             'items': [{
@@ -392,7 +395,16 @@ module.exports = {
                 'title': 'GraphRAG',
                 'path': '/大模型/GraphRAG/GraphRAG学习资源',
                 'collapsable': false,
-                'children': [{'title': 'GraphRAG学习资源', 'path': '/大模型/GraphRAG/GraphRAG学习资源'}]
+                'children': [{
+                    'title': 'GraphRAG学习资源',
+                    'path': '/大模型/GraphRAG/GraphRAG学习资源'
+                }, {
+                    'title': 'GraphRAG是什么',
+                    'path': '/大模型/GraphRAG/GraphRAG是什么'
+                }, {
+                    'title': '使用GraphRAG根据知识图谱进行检索和内容生成',
+                    'path': '/大模型/GraphRAG/使用GraphRAG根据知识图谱进行检索和内容生成'
+                }, {'title': '根据pdf来生成知识图谱的DEMO', 'path': '/大模型/GraphRAG/根据pdf来生成知识图谱的DEMO'}]
             }, {
                 'title': 'langchain',
                 'path': '/大模型/langchain/langchain介绍',
@@ -414,10 +426,29 @@ module.exports = {
                     'path': '/大模型/langchain/LLM Chains的详细使用'
                 }, {'title': 'Memory功能的详细使用', 'path': '/大模型/langchain/Memory功能的详细使用'}]
             }, {
+                'title': '向量数据库',
+                'path': '/大模型/向量数据库/FAISS和大模型的关系',
+                'collapsable': false,
+                'children': [{
+                    'title': 'FAISS和大模型的关系',
+                    'path': '/大模型/向量数据库/FAISS和大模型的关系'
+                }, {
+                    'title': 'GraphRAG和向量数据库的区别',
+                    'path': '/大模型/向量数据库/GraphRAG和向量数据库的区别'
+                }, {'title': '向量嵌入简介', 'path': '/大模型/向量数据库/向量嵌入简介'}, {
+                    'title': '向量数据库概览',
+                    'path': '/大模型/向量数据库/向量数据库概览'
+                }]
+            }, {
                 'title': '实践经验',
                 'path': '/大模型/实践经验/第一个使用openai的demo',
                 'collapsable': false,
                 'children': [{'title': '第一个使用openai的demo', 'path': '/大模型/实践经验/第一个使用openai的demo'}]
+            }, {
+                'title': '深度学习',
+                'path': '/大模型/深度学习/MIMIC-III学习资料',
+                'collapsable': false,
+                'children': [{'title': 'MIMIC-III学习资料', 'path': '/大模型/深度学习/MIMIC-III学习资料'}]
             }],
             '/性能测试/': [{
                 'title': 'JVM',
@@ -528,8 +559,17 @@ module.exports = {
                     'title': 'Windows对JMeter的性能约束',
                     'path': '/性能测试/性能诊断/Windows对JMeter的性能约束'
                 }, {
+                    'title': '一个前端事务操作性能体验慢排查思路',
+                    'path': '/性能测试/性能诊断/一个前端事务操作性能体验慢排查思路'
+                }, {
                     'title': '分离接口逐个压测的优势',
                     'path': '/性能测试/性能诊断/分离接口逐个压测的优势'
+                }, {
+                    'title': '如何确认HTTP层的网络延迟',
+                    'path': '/性能测试/性能诊断/如何确认HTTP层的网络延迟'
+                }, {
+                    'title': '用户性能体验问题及排查方向',
+                    'path': '/性能测试/性能诊断/用户性能体验问题及排查方向'
                 }, {'title': '网络问题排查', 'path': '/性能测试/性能诊断/网络问题排查'}]
             }, {
                 'title': '性能调优',
