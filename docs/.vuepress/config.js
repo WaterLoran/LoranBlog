@@ -93,7 +93,7 @@ module.exports = {
             }, {'text': '负载均衡', 'link': '/测试开发/负载均衡/微服务间的负载均衡算法'}, {
                 'text': '资损防控',
                 'link': '/测试开发/资损防控/基本概念'
-            }]
+            }, {'text': '资源下载', 'link': '/测试开发/资源下载/测试资源'}]
         }, {
             'text': '测试管理',
             'items': [{'text': 'devops', 'link': '/测试管理/devops/devops的发展历史'}, {
@@ -916,6 +916,11 @@ module.exports = {
                 'path': '/测试开发/资损防控/基本概念',
                 'collapsable': false,
                 'children': [{'title': '基本概念', 'path': '/测试开发/资损防控/基本概念'}]
+            }, {
+                'title': '资源下载',
+                'path': '/测试开发/资源下载/测试资源',
+                'collapsable': false,
+                'children': [{'title': '测试资源', 'path': '/测试开发/资源下载/测试资源'}]
             }],
             '/测试管理/': [{
                 'title': 'devops',
