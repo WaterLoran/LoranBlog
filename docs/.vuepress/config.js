@@ -681,6 +681,9 @@ module.exports = {
                 'children': [{
                     'title': 'centos更新yum源',
                     'path': '/测试开发/LInux运维/centos更新yum源'
+                }, {'title': 'frp基本使用', 'path': '/测试开发/LInux运维/frp基本使用'}, {
+                    'title': 'frp基本使用_toml',
+                    'path': '/测试开发/LInux运维/frp基本使用_toml'
                 }, {
                     'title': 'Linux安装nodejs',
                     'path': '/测试开发/LInux运维/Linux安装nodejs'
