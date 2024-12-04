@@ -53,7 +53,7 @@ module.exports = {
             'text': '测试开发',
             'items': [{'text': 'kafka', 'link': '/测试开发/kafka/java使用kafka的简单demo'}, {
                 'text': 'LInux运维',
-                'link': '/测试开发/LInux运维/centos更新yum源'
+                'link': '/测试开发/LInux运维/centos更新docker源'
             }, {'text': 'redis', 'link': '/测试开发/redis/redis中的失效场景'}, {
                 'text': 'tomcat',
                 'link': '/测试开发/tomcat/Linux后台查看tomcat线程的方法'
@@ -535,9 +535,12 @@ module.exports = {
                 }, {'title': '如何针对kafka的失效场景做测试', 'path': '/测试开发/kafka/如何针对kafka的失效场景做测试'}]
             }, {
                 'title': 'LInux运维',
-                'path': '/测试开发/LInux运维/centos更新yum源',
+                'path': '/测试开发/LInux运维/centos更新docker源',
                 'collapsable': false,
-                'children': [{'title': 'centos更新yum源', 'path': '/测试开发/LInux运维/centos更新yum源'}, {
+                'children': [{
+                    'title': 'centos更新docker源',
+                    'path': '/测试开发/LInux运维/centos更新docker源'
+                }, {'title': 'centos更新yum源', 'path': '/测试开发/LInux运维/centos更新yum源'}, {
                     'title': 'frp基本使用',
                     'path': '/测试开发/LInux运维/frp基本使用'
                 }, {'title': 'frp基本使用_toml', 'path': '/测试开发/LInux运维/frp基本使用_toml'}, {
