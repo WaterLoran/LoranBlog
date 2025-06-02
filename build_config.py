@@ -155,10 +155,14 @@ plugins: [
     config_content = config_content.replace("False", 'false').replace('False', 'false')
 
     current_directory = os.getcwd()
-    with open(current_directory + "\docs\.vuepress\config.js", 'w', encoding='utf-8') as f:
+    print("current_directory", current_directory)
+    fil_path = os.path.join(current_directory, "docs", ".vuepress", "config.js")
+    with open(fil_path, 'w', encoding='utf-8') as f:
         f.write(config_content)
     print("config.js has been generated.")
 
 
 if __name__ == "__main__":
     main()
+
+#  启动vuepress的命令是。yarn docs:dev
