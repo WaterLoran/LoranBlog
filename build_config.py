@@ -114,6 +114,13 @@ def main():
 module.exports = {{
     title: '罗兰测试',
     logo: '/images/logo/猞猁.png',
+    head: [
+        ['link', {{ rel: 'icon', href: '/logo/favicon.ico' }}], 
+        ['link', {{ rel: 'icon', type: 'image/png', sizes: '32x32', href: '/logo/favicon-32x32.png' }}],
+        ['link', {{ rel: 'icon', type: 'image/png', sizes: '16x16', href: '/logo/favicon-16x16.png' }}],
+        ['link', {{ rel: 'apple-touch-icon', sizes: '180x180', href: '/logo/apple-touch-icon.png' }}],
+        ['meta', {{ name: 'theme-color', content: '#3eaf7c' }}]
+    ],
     description: '各类测试理论, 技能, 经验, 故事, 职业发展的博客文档',
     theme: 'reco',
     themeConfig: {{
