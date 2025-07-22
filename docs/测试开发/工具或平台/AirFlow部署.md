@@ -234,4 +234,4 @@ kubectl get pods -n airflow
 - **生产环境**：优先选择 CeleryExecutor（分布式任务）或 KubernetesExecutor（云原生弹性）。  
 - **关键优化**：高可用性（多 Scheduler）、监控（Prometheus/Grafana）、安全（认证/网络隔离）。  
 
-通过合理选择部署方案，Airflow 能够稳定支撑企业级工作流调度需求。
+# 通过合理选择部署方案，Airflow 能够稳定支撑企业级工作流调度需求。
