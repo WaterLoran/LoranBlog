@@ -19,6 +19,7 @@
     "vuepress-theme-reco": "^1.6.17"
   },
   "dependencies": {
+    "@vue/composition-api": "^1.7.2",
     "serve": "^14.2.3"
   }
 }

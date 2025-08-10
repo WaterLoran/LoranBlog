@@ -19,7 +19,7 @@ RUN yarn config set registry https://registry.npmmirror.com && \
     yarn install --frozen-lockfile
 
 # 复制项目文件
-COPY . .
+COPY ../docker .
 
 # 构建生产环境应用
 RUN yarn build:prod
