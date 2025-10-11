@@ -94,6 +94,7 @@ def generate_nav_sidebar(base_path):
     nav.append({
         "text": "优质博客",
         "items": [
+            {"text": "AI关乎未来", "link": "https://zerozzz.win/"},
             {"text": "美团技术团队", "link": "https://tech.meituan.com/"},
             {"text": "Java全栈知识体系", "link": "https://pdai.tech/"},
             {"text": "BY林子", "link": "https://www.bylinzi.com/"},
