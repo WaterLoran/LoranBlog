@@ -175,4 +175,4 @@ if __name__ == "__main__":
 
 #  启动vuepress的命令是。yarn docs:dev
 #  当内存不足导致build失败的时候, export NO
-# NODE_OPTIONS="--max-old-space-size=8192" yarn docs:build
+# NODE_OPTIONS="--max-old-space-size=16384" yarn docs:build
