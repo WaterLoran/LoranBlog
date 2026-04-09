@@ -1,0 +1,122 @@
+# ChatPromptTemplate.from_message
+
+`ChatPromptTemplate.from_messages()` 是 LangChain 中**用于构建多轮、多角色对话提示的核心方法**。与只能创建单条用户消息的 `from_template()` 不同，它允许你精确设计一个完整的对话上下文，这对于构建复杂的Agent、聊天机器人和遵循特定指令的AI系统至关重要。
+
+### 核心概念：消息列表
+
+它的核心思想是：**一个完整的提示 = 一个有序的消息列表**。每条消息都有明确的“角色”（如系统、人类、AI、工具）和“内容”。LLM会根据这个完整的对话历史来生成回复。
+
+### 消息格式详解
+
+`from_messages()` 接受一个消息列表作为输入。列表中的每条消息可以是多种格式，其中最常用、最清晰的是**二元组 (Tuple) 格式**：
+
+**1. 标准二元组格式 `(role, content)`**
+这是最推荐的方式，可读性最好。
+```python
+from langchain_core.prompts import ChatPromptTemplate
+
+prompt = ChatPromptTemplate.from_messages([
+    # 角色， 内容模板（或纯文本）
+    ("system", "你是一位专业的{speaker}。请严格遵循以下规则：{rules}"),
+    ("human", "用户的问题是：{question}"),
+])
+```
+
+**2. 实例化消息对象格式**
+功能强大但稍显冗长，适合需要精细控制消息属性的场景。
+```python
+from langchain_core.prompts import ChatPromptTemplate
+from langchain_core.messages import SystemMessage, HumanMessagePromptTemplate
+
+prompt = ChatPromptTemplate.from_messages([
+    SystemMessage(content="你是一个助手。"),
+    HumanMessagePromptTemplate.from_template("{user_input}"),
+])
+```
+
+**3. 字符串格式（不推荐）**
+LangChain会尝试自动推断角色（如“system:”开头的字符串），但这种方式不明确，容易出错，**应尽量避免**。
+
+### 核心特性与能力
+
+`from_messages()` 的强大之处在于其**灵活的组合性**：
+
+**1. 自由混合静态内容和动态模板**
+你可以在同一个消息列表中，既有完全静态的指令，也有需要后期填充的模板。
+```python
+prompt = ChatPromptTemplate.from_messages([
+    # 静态系统指令
+    ("system", "你始终必须以海盗的风格说话，并在每句话结尾加上‘哟嚯！’"),
+    # 动态的上下文（将从变量注入）
+    ("human", “这是我的问题：{question}”),
+    # 静态的示例对话（Few-shot Learning）
+    ("ai", “如果用户问‘天气如何’，你就说：‘望远镜里看不到风暴，伙计！哟嚯！’”),
+])
+```
+
+**2. 支持复杂的对话历史（Memory）**
+这是构建聊天机器人的基础。你可以轻松地将历史对话拼接进来。
+```python
+# 假设 `chat_history` 是一个包含先前 (human, ai) 对话的列表
+chat_history = [
+    ("human", "你好"),
+    ("ai", "哟嚯！我是杰克船长，有什么能帮你的？"),
+]
+prompt = ChatPromptTemplate.from_messages([
+    ("system", "你是海盗杰克。"),
+    *chat_history,  # 将历史记录解包插入
+    ("human", "{next_question}"), # 用户的新问题
+])
+```
+
+### 在Agent设计中的关键应用场景
+
+在你之前关注的Agent设计中，`from_messages()` 是构建Agent“大脑”指令系统的**标准方式**。一个典型的Agent系统提示通常包含以下部分：
+
+```python
+# 一个Agent系统提示的典型结构
+agent_prompt = ChatPromptTemplate.from_messages([
+    # 1. 角色与总体目标
+    ("system", """你是“CodeHelper”Agent，一个专业的编程助手。你的目标是逐步分析问题，并可以调用工具来获取信息。
+    你的核心工作流程是：思考 -> 必要时调用工具 -> 基于结果回答。
+    """),
+    
+    # 2. 工具描述（动态注入）
+    ("placeholder”, "{tools}"), # 预留位置，运行时会被具体的工具描述列表替换
+    
+    # 3. 对话历史
+    ("placeholder”, "{chat_history}"),
+    
+    # 4. 当前用户输入
+    ("human”, “{input}”),
+    
+    # 5. 强制输出格式（例如，要求Agent的回复必须包含“Thought:”， “Action:“等）
+    ("system", “请严格按照以下格式回复：\nThought: <你的思考>\nAction: <要调用的工具名>\nAction Input: <工具输入>”),
+])
+
+# 使用示例：在构建Agent时，会这样填充
+from langchain.agents import create_react_agent
+agent = create_react_agent(
+    llm=llm,
+    tools=[search_tool, calculator_tool],
+    prompt=agent_prompt # 使用上面定义的结构化提示
+)
+```
+
+### 与 `from_template()` 的对比
+
+| 特性         | `from_template()`                                 | `from_messages()`                                            |
+| :----------- | :------------------------------------------------ | :----------------------------------------------------------- |
+| **设计目的** | 创建**单轮**、**单角色**（默认Human）的简单提示。 | 创建**多轮**、**多角色**的复杂对话提示。                     |
+| **输出结构** | 一个只含 `HumanMessage` 的列表。                  | 一个可包含任意顺序、任意角色消息的列表。                     |
+| **灵活性**   | 低，功能单一。                                    | **极高**，可自由组合系统指令、示例、历史、工具描述、用户输入等。 |
+| **典型场景** | 简单的文本转换、信息提取、摘要。                  | **Agent系统**、聊天机器人、需要上下文或Few-shot Learning的任务。 |
+
+### 最佳实践与总结
+
+1.  **清晰定义角色**：始终使用明确的角色标签（`“system”`, `“human”`, `“ai”`），这能让提示的意图更清晰，也便于LangChain内部处理。
+2.  **结构化构建**：像搭建乐高积木一样构建提示。将系统指令、工具、历史、用户输入等模块化。
+3.  **善用 `Placeholder`**：对于在运行时才能确定的内容（如工具列表、长上下文），使用 `(“placeholder”, “{variable_name}”)` 来预留位置，保持模板的整洁。
+4.  **优先用于复杂交互**：当你的应用需要**记忆**、需要**多步骤推理**（如Agent）、或需要提供**示例**时，`from_messages()` 是唯一正确的选择。
+
+**总结来说，`ChatPromptTemplate.from_messages()` 是你构建一切复杂、有状态、交互式LLM应用的基石。** 它提供了将系统指令、背景知识、对话历史和用户查询精心编排成一个完整“舞台剧本”的能力，从而精准地引导LLM演好你赋予的角色。
