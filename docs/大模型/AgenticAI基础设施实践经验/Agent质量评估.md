@@ -2,7 +2,7 @@
 
 by [AWS Team](https://aws.amazon.com/cn/blogs/china/author/xubxu/) on 19 9月 2025 in [Generative AI](https://aws.amazon.com/cn/blogs/china/category/generative-ai-2/) [Permalink](https://aws.amazon.com/cn/blogs/china/agent-quality-evaluation/) [ Share](https://aws.amazon.com/cn/blogs/china/agent-quality-evaluation/#)
 
-![AWS 中国博客横幅 – Agentic AI 基础设施实践系列](Agent质量评估/aws-china-blog-banner-agentic-ai-series.png)
+![AWS 中国博客横幅 – Agentic AI 基础设施实践系列](/images/AgenticAI基础设施实践经验/Agent质量评估/aws-china-blog-banner-agentic-ai-series.png)
 
 ## **1. Agent** **评估简介**
 
@@ -42,7 +42,7 @@ Agent 评估指标非常多，可以分为业务类型指标、效率类型指�
 
 (1) **任务完成率（****Task Completion Rate, TCR****）**
 
-![任务完成率（TCR）公式](Agent质量评估/formula-task-completion-rate.png)
+![任务完成率（TCR）公式](/images/AgenticAI基础设施实践经验/Agent质量评估/formula-task-completion-rate.png)
 
 其中，*C* 为成功完成的任务数，N 为总任务数
 
@@ -53,7 +53,7 @@ Agent 评估指标非常多，可以分为业务类型指标、效率类型指�
 
 (2) **决策准确率（****Decision Accuracy****）**
 
-![决策准确率公式](Agent质量评估/formula-decision-accuracy.png)
+![决策准确率公式](/images/AgenticAI基础设施实践经验/Agent质量评估/formula-decision-accuracy.png)
 
 **应用场景：**
 
@@ -62,7 +62,7 @@ Agent 评估指标非常多，可以分为业务类型指标、效率类型指�
 
 (3) **工具调用正确率（****Tool Call Accuracy****）**
 
-![工具调用正确率公式](Agent质量评估/formula-tool-call-accuracy.png)
+![工具调用正确率公式](/images/AgenticAI基础设施实践经验/Agent质量评估/formula-tool-call-accuracy.png)
 
 **应用场景：**
 
@@ -73,7 +73,7 @@ Agent 评估指标非常多，可以分为业务类型指标、效率类型指�
 
 (1) **平均任务耗时（****Average Time****）**
 
-![平均任务耗时公式](Agent质量评估/formula-average-task-time.png)
+![平均任务耗时公式](/images/AgenticAI基础设施实践经验/Agent质量评估/formula-average-task-time.png)
 
 其中，*tend*为任务结束时间，tstart为任务开始时间，*N* 为任务总数
 
@@ -83,7 +83,7 @@ Agent 评估指标非常多，可以分为业务类型指标、效率类型指�
 
 (2) **平均交互轮数（****Average steps****）**
 
-![平均交互轮数公式](Agent质量评估/formula-average-interaction-steps.png)
+![平均交互轮数公式](/images/AgenticAI基础设施实践经验/Agent质量评估/formula-average-interaction-steps.png)
 
 其中，为第steps_i个任务的交互轮数，N为任务总数
 
@@ -95,7 +95,7 @@ Agent 评估指标非常多，可以分为业务类型指标、效率类型指�
 
 **偏见发生率（****Bias rate****）**
 
-![偏见发生率公式](Agent质量评估/formula-bias-rate.png)
+![偏见发生率公式](/images/AgenticAI基础设施实践经验/Agent质量评估/formula-bias-rate.png)
 
 - **招聘场景**：招聘筛选 Agent 对简历的评估是否存在性别 / 年龄偏见（如同等条件下优先排除女性候选人）。若 1000 份简历评估中，有 30 份因不合理偏见被错误筛选，则偏见率为 3%。
 - **打车平台场景**：网约车调度 Agent 是否对不同区域用户（如郊区 vs 市区）存在派单延迟偏见。若 1000 次郊区订单中，50 次因偏见导致派单慢于合理时间，则偏见率为 5%。
@@ -125,7 +125,7 @@ Agent 评估指标非常多，可以分为业务类型指标、效率类型指�
 - **环境部分可观测**：模拟真实环境中信息有限的场景，考察 Agent 在信息不足时的推理和探索能力。
 - **可视化分析**：通过轨迹回放、热力图、能力对比图，帮助开发者直观理解 Agent 行为瓶颈。
 
-![图 1 – AgentBoard可视化呈现](Agent质量评估/fig-agentboard-visualization.png)
+![图 1 – AgentBoard可视化呈现](/images/AgenticAI基础设施实践经验/Agent质量评估/fig-agentboard-visualization.png)
 
 **表** **2** **– AgentBoard核心组件**
 
@@ -226,7 +226,7 @@ AgentBench 由清华大学等团队提出，旨在填补以往评测场景单一
 
 - 细粒度检测：逐个工具调用的对比，以及调用工具对应参数提取正取率的对比，如下图所示：
 
-![图2 – Tool 调用分析图](Agent质量评估/fig-tool-call-analysis.png)
+![图2 – Tool 调用分析图](/images/AgenticAI基础设施实践经验/Agent质量评估/fig-tool-call-analysis.png)
 
 - 粗粒度检测：可以直接对比所有工具调用完成后任务环境的一致性，如 AgentBench 虚拟docker 环境验证或 τ-bench 中的提到的数据状态变更的一致性检测。
 
@@ -277,7 +277,7 @@ AgentBench 由清华大学等团队提出，旨在填补以往评测场景单一
 - 用户模拟：基于每个任务的 instruction 模拟生成真实的用户响应
 - 工具：Retail Agent 可以调用的特定领域功能来完成任务
 
-![图3 – Retail Agent 评估时序图](Agent质量评估/fig-retail-agent-evaluation-sequence.png)
+![图3 – Retail Agent 评估时序图](/images/AgenticAI基础设施实践经验/Agent质量评估/fig-retail-agent-evaluation-sequence.png)
 
 #### **2.2.4** **评估结果**
 
@@ -285,17 +285,17 @@ AgentBench 由清华大学等团队提出，旨在填补以往评测场景单一
 
 **（****1****）****Agent** **执行以后的数据一致性来判断最终的任务完成率**
 
-![图4 – 评估任务执行输出结果](Agent质量评估/fig-evaluation-task-output.png)
+![图4 – 评估任务执行输出结果](/images/AgenticAI基础设施实践经验/Agent质量评估/fig-evaluation-task-output.png)
 
 **（****2****）****LLM as Judge** **进行失败任务的归因分析**
 
-![图5 – 失败任务归因分析（1）](Agent质量评估/fig-failure-attribution-analysis-1.png)
+![图5 – 失败任务归因分析（1）](/images/AgenticAI基础设施实践经验/Agent质量评估/fig-failure-attribution-analysis-1.png)
 
-![图5 – 失败任务归因分析（2）](Agent质量评估/fig-failure-attribution-analysis-2.png)
+![图5 – 失败任务归因分析（2）](/images/AgenticAI基础设施实践经验/Agent质量评估/fig-failure-attribution-analysis-2.png)
 
 **（****3****）使用****Langfuse** **评估可观测性，对** **Agent** **每次任务完成时间、中间交互时间、任务** **token** **消耗等进行监控和管理。**
 
-![图6 – Langfuse可观测性追踪](Agent质量评估/fig-langfuse-observability-tracing.gif)
+![图6 – Langfuse可观测性追踪](/images/AgenticAI基础设施实践经验/Agent质量评估/fig-langfuse-observability-tracing.gif)
 
  
 
@@ -303,7 +303,7 @@ AgentBench 由清华大学等团队提出，旨在填补以往评测场景单一
 
 参考 AgentBoard 的评估方式和评估思想，我们基于 AgentBoard 框架实现了天气报告助手 （Weather Report Assistant）Agent，模拟一个面向天气查询的智能助手工作和Agent 评估流程，通过 SummaryLogger 来观测和跟踪评估的中间结果以及对应的关键指标，方便进行后续的人工复查，同时通过测试可以评估任务整体的执行效率和准确性。并在完成的最后使用评估指标分析对失败任务进行归因分析。具体实现请参考[示例代码](https://github.com/Anya2089/weatherreportagentwithagentboardeval)。
 
-![图 7 – Weather Report Assistant Agent 示例](Agent质量评估/fig-weather-report-assistant-example.png)
+![图 7 – Weather Report Assistant Agent 示例](/images/AgenticAI基础设施实践经验/Agent质量评估/fig-weather-report-assistant-example.png)
 
  
 
@@ -457,7 +457,7 @@ Plain Text
 - **EvalTool**：评估控制模块，负责初始化环境和智能体，跟踪任务进度和奖励变化，计算评估指标（成功率、进度率、接地精度等）
 - **TaskLogger/SummaryLogger**：日志记录模块，记录智能体的动作、环境的观察、奖励变化等，生成详细的日志文件，汇总评估结果
 
-![图8 – Weather Assistant Agent 评估时序图](Agent质量评估/fig-weather-assistant-evaluation-sequence.png)
+![图8 – Weather Assistant Agent 评估时序图](/images/AgenticAI基础设施实践经验/Agent质量评估/fig-weather-assistant-evaluation-sequence.png)
 
 #### **2.2.5 运行后结果分析**
 
@@ -642,9 +642,9 @@ AI 考题生成Agent可满足各类考题生成需求：
 - 多题型支持涵盖单选题（每题一个正确答案）、多选题（每题多个正确答案）、填空题（需填写特定内容）；难度级别调整分为简单（适合入门学习和基础知识检测）、中等（适合常规考核和能力评估）、困难（适合高阶思维和深度理解测试）。
 - 在参考资料处理上，既支持 URL 作为参考（自动获取网页内容生成相关题目），也支持文本作为参考（用户直接提供文本材料作为出题依据）。
 - 生成的考试内容会渲染为交互式 HTML 页面，支持选择、填空等交互操作，界面美观易用；还支持中英文双语界面，可生成不同语言的考题。
-- ![图9 – 前端界面示例](Agent质量评估/fig-exam-generator-ui-example.png)
+- ![图9 – 前端界面示例](/images/AgenticAI基础设施实践经验/Agent质量评估/fig-exam-generator-ui-example.png)
 
-![图10 – Agent 评估工作流与主流程的集成](Agent质量评估/fig-taskmanager-evaluation-workflow.png)
+![图10 – Agent 评估工作流与主流程的集成](/images/AgenticAI基础设施实践经验/Agent质量评估/fig-taskmanager-evaluation-workflow.png)
 
 考试生成流程和TaskManager任务监控管理流程紧密协同工作，形成一个完整的系统：
 

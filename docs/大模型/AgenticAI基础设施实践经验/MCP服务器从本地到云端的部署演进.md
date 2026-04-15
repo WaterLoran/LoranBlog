@@ -2,7 +2,7 @@
 
 by [AWS Team](https://aws.amazon.com/cn/blogs/china/author/zhyawenm/) on 19 9月 2025 in [Generative AI](https://aws.amazon.com/cn/blogs/china/category/artificial-intelligence/generative-ai/) [Permalink](https://aws.amazon.com/cn/blogs/china/agentic-ai-infrastructure-practice-experience-series-four-mcp-server-from-local/) [ Share](https://aws.amazon.com/cn/blogs/china/agentic-ai-infrastructure-practice-experience-series-four-mcp-server-from-local/#)
 
-![AWS 中国博客横幅 – Agentic AI 基础设施实践系列](MCP服务器从本地到云端的部署演进/aws-china-blog-banner-agentic-ai-series.png)
+![AWS 中国博客横幅 – Agentic AI 基础设施实践系列](/images/AgenticAI基础设施实践经验/MCP服务器从本地到云端的部署演进/aws-china-blog-banner-agentic-ai-series.png)
 
 ## 引言
 
@@ -28,7 +28,7 @@ by [AWS Team](https://aws.amazon.com/cn/blogs/china/author/zhyawenm/) on 19 9月
 
 以 Claude 提供的示例 [Git MCP Server](https://github.com/modelcontextprotocol/servers/tree/main/src/git) 为例，客户端通过 MCP 协议向 MCP Server 发起操作 Git 存储库的请求，Git MCP Server 利用内置的 Git SDK 对存储库进行操作后，以 MCP 协议向客户端返回操作结果。这种设计实现了协议层面的解耦，使得工具的升级和变更不会直接影响到 AI 应用。
 
-![图 1：MCP 客户端和服务器的关系](MCP服务器从本地到云端的部署演进/fig-01-mcp-client-server-relationship.jpg)
+![图 1：MCP 客户端和服务器的关系](/images/AgenticAI基础设施实践经验/MCP服务器从本地到云端的部署演进/fig-01-mcp-client-server-relationship.jpg)
 
 MCP 协议带来的最大优势是松耦合架构。AI 智能体只需要支持 MCP 协议，不需要关心工具的更新和变化，也不再需要学习和适配各种不同的 API 格式，所有的工具调用都通过统一的 MCP 协议进行，使用相同的数据格式和通信方式，这大大简化了开发者使用多种工具的集成复杂度，让大量工具的集成变得可行。而对工具提供方而言，每个工具的 MCP 服务器由相应的厂商或社区独立开发和维护，而无需考虑与AI 智能体进行集成。这样就实现了责任的清晰分工。
 
@@ -40,7 +40,7 @@ MCP 协议支持两种主要的部署模式：本地部署和远程部署。二�
 
 ### 本地部署
 
-![图 2：本地环境运行Agent Tools](MCP服务器从本地到云端的部署演进/fig-02-local-environment-agent-tools.jpg)
+![图 2：本地环境运行Agent Tools](/images/AgenticAI基础设施实践经验/MCP服务器从本地到云端的部署演进/fig-02-local-environment-agent-tools.jpg)
 
 绝大多数 MCP 服务器默认提供本地部署方式。本地部署模式中，MCP 服务器作为本地进程或容器运行。用户需要配置启动命令（如 npx ， uv 等包管理器，或 docker 等容器运行时）以及对应的启动参数和环境变量。配置完成后，客户端通过系统调用创建子进程，启动服务端程序，并建立与子进程的输入输出管道连接。客户端只要监测服务器进程，即可了解 MCP 服务器的运行状况。这种基于进程生命周期的连接管理机制简单有效，避免了复杂的网络连接管理问题。
 
@@ -63,7 +63,7 @@ MCP 协议支持两种主要的部署模式：本地部署和远程部署。二�
 
 许多 MCP 服务器提供方已经开始支持远程部署模式，例如 [Remote GitHub MCP Server](https://github.com/github/github-mcp-server) 和 [AWS Knowledge MCP Server](https://awslabs.github.io/mcp/servers/aws-knowledge-mcp-server/) 。这种模式虽然增加了网络延迟，但在安全性、性能和可维护性方面具有显著优势。
 
-![图 3：远程环境运行Agent Tools](MCP服务器从本地到云端的部署演进/fig-03-remote-environment-agent-tools.jpg)
+![图 3：远程环境运行Agent Tools](/images/AgenticAI基础设施实践经验/MCP服务器从本地到云端的部署演进/fig-03-remote-environment-agent-tools.jpg)
 
 远程部署在以下领域有独到优势：
 
@@ -105,7 +105,7 @@ Amazon Bedrock AgentCore 是亚马逊云科技推出的一项全新服务，专�
 
 Amazon Bedrock AgentCore Runtime 是专门为 Agent 或 MCP 服务器构建的无服务器运行环境，提供会话级的安全隔离以及按量付费的计费模式。
 
-![图 4：Bedrock AgentCore Runtime 部署MCP Server](MCP服务器从本地到云端的部署演进/fig-04-bedrock-agentcore-runtime-mcp-server.jpg)
+![图 4：Bedrock AgentCore Runtime 部署MCP Server](/images/AgenticAI基础设施实践经验/MCP服务器从本地到云端的部署演进/fig-04-bedrock-agentcore-runtime-mcp-server.jpg)
 
 Amazon Bedrock AgentCore Runtime 提供 MCP 服务器支持，您可以使用 bedrock-agentcore-starter-toolkit 快速将您的 MCP 服务器从源代码部署到 Amazon Bedrock AgentCore Runtime，而无需管理任何基础设施。
 
@@ -115,7 +115,7 @@ Amazon Bedrock AgentCore Runtime 提供 MCP 服务器支持，您可以使用 be
 
 #### 2. 利用 AWS Lambda 部署无状态 MCP 服务器
 
-![图 5：Lambda 部署无状态MCP Server](MCP服务器从本地到云端的部署演进/fig-05-lambda-stateless-mcp-server.jpg)
+![图 5：Lambda 部署无状态MCP Server](/images/AgenticAI基础设施实践经验/MCP服务器从本地到云端的部署演进/fig-05-lambda-stateless-mcp-server.jpg)
 
 Amazon Lambda 特别适合处理无状态的 MCP 服务器场景。这类场景通常包括网络搜索、API 调用等无状态操作，采用单次请求-响应模式，任务运行时间相对较短。Lambda 的事件驱动特性与这种使用模式高度契合。
 
@@ -129,7 +129,7 @@ Lambda 的优势在于其独特的计费模式和运行特性。毫秒级计费�
 
 ### 3. 利用 Amazon ECS with Amazon Fargate 部署有状态 MCP 服务器
 
-![图 6：ECS Fargate 部署有状态MCP Server](MCP服务器从本地到云端的部署演进/fig-06-ecs-fargate-stateful-mcp-server.jpg)
+![图 6：ECS Fargate 部署有状态MCP Server](/images/AgenticAI基础设施实践经验/MCP服务器从本地到云端的部署演进/fig-06-ecs-fargate-stateful-mcp-server.jpg)
 
 与无状态的 Amazon Lambda 相比，容器环境无疑适合处理有状态的 MCP 服务器场景。这类场景包括多轮对话场景（如 Playwright 自动化），需要保持状态的长时间运行任务，以及处理时间较长，需要通过 Server-Sent Events (SSE) 不断发送进程或中间结果的应用。容器化部署更为灵活，对于复杂，或依赖外部组件的 MCP 服务器更为方便。您可以将依赖的组件和 MCP 服务器构建在同一个容器镜像中，MCP 服务器和依赖项可通过跨进程调用或本地网络进行交互，降低复杂度。
 
@@ -145,7 +145,7 @@ AWS 提供多种容器运行时选择。您可以使用现有的容器基础设�
 
 #### 使用 Amazon Bedrock AgentCore Gateway 转换现有 API
 
-![图 7：Bedrock AgentCore Gateway 架构](MCP服务器从本地到云端的部署演进/fig-07-bedrock-agentcore-gateway-architecture.jpg)
+![图 7：Bedrock AgentCore Gateway 架构](/images/AgenticAI基础设施实践经验/MCP服务器从本地到云端的部署演进/fig-07-bedrock-agentcore-gateway-architecture.jpg)
 
 Amazon Bedrock AgentCore Gateway 是一项全托管的工具网关服务，其**主要作用是作为一个统一的连接层**，将各种不同的工具和资源转换为 MCP 兼容的工具，使 Agent 能够通过单一的端点访问背后的多种工具。
 
@@ -157,7 +157,7 @@ Amazon Bedrock AgentCore Gateway 支持将 Lambda 函数、OpenAPI 规范 API、
 
 ### 在亚马逊中国区域快速将现有 MCP 服务器部署至云上
 
-![图 8：mcp-proxy接口转换](MCP服务器从本地到云端的部署演进/fig-08-mcp-proxy-stdio-http-bridge.jpg)
+![图 8：mcp-proxy接口转换](/images/AgenticAI基础设施实践经验/MCP服务器从本地到云端的部署演进/fig-08-mcp-proxy-stdio-http-bridge.jpg)
 
 为了简化现有 MCP 服务器到云端的迁移过程，我们开发了一款自动化转换解决方案。该解决方案将现有基于 stdio 交互模式的 MCP 服务器转换至可在云上部署的，基于 Streamable HTTP 的 MCP 服务器。该解决方案基于社区开源的 [mcp-proxy ](https://github.com/punkpeye/mcp-proxy)项目，该项目本质上是一个 HTTP 服务器，将收到的请求转发至 MCP 服务器进程中，以完成 Streamable HTTP 至 stdio 的转换而无需修改源代码。
 

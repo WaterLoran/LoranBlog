@@ -2,7 +2,7 @@
 
 by [AWS Team](https://aws.amazon.com/cn/blogs/china/author/xubxu/) on 19 9月 2025 in [Artificial Intelligence](https://aws.amazon.com/cn/blogs/china/category/artificial-intelligence/), [Generative AI](https://aws.amazon.com/cn/blogs/china/category/artificial-intelligence/generative-ai/) [Permalink](https://aws.amazon.com/cn/blogs/china/agentic-ai-infrastructure-deep-practice-experience-thinking-series-three-best-practices-for-agent-memory-module/) [ Share](https://aws.amazon.com/cn/blogs/china/agentic-ai-infrastructure-deep-practice-experience-thinking-series-three-best-practices-for-agent-memory-module/#)
 
-![AWS 中国博客横幅 – Agentic AI 基础设施实践系列](Agent记忆模块的最佳实践/aws-china-blog-banner-agentic-ai-series.png)
+![AWS 中国博客横幅 – Agentic AI 基础设施实践系列](/images/AgenticAI基础设施实践经验/Agent记忆模块的最佳实践/aws-china-blog-banner-agentic-ai-series.png)
 
 *本文将深入探讨 Agent**应用中的记忆需求、记忆类型、技术组件和主流开源框架，并介绍基于亚马逊云科技的数据产品自行构建记忆模块，以及基于Agent**构建平台Bedrock AgentCore**的Agent memory**的托管方案。*
 
@@ -185,7 +185,7 @@ Letta可无缝对接亚马逊云科技服务栈，以下是一个通过 Letta �
 - 利用 ElastiCache 缓存来提升推理（框架原生支持）、问答等场景（需要搭建缓存中间件）的效率
 - 通过 亚马逊云科技 Lambda 实现记忆管理的无服务器架构
 
-![图1. 通过 Letta 框架搭建的电商客服机器人问答流程示例](Agent记忆模块的最佳实践/fig-01-letta-ecommerce-customer-service-flow.jpg)
+![图1. 通过 Letta 框架搭建的电商客服机器人问答流程示例](/images/AgenticAI基础设施实践经验/Agent记忆模块的最佳实践/fig-01-letta-ecommerce-customer-service-flow.jpg)
 
 **LangMem**
 
@@ -205,7 +205,7 @@ LangMem 不仅能存储对话中的重要信息，还能优化提示和行为，
 
 相比开源框架，亚马逊云科技也提供**开箱即用的托管服务**，通过AI Agent构建平台Bedrock AgentCore中的记忆模块帮助开发者更快捷地为AI Agent赋能记忆功能。您无需运维任何底层资源，只需一键即可集成业界领先的记忆系统。
 
-![图2 – Bedrock AgentCore中的记忆模块核心功能展示](Agent记忆模块的最佳实践/fig-02-bedrock-agentcore-memory-core-features.jpg)
+![图2 – Bedrock AgentCore中的记忆模块核心功能展示](/images/AgenticAI基础设施实践经验/Agent记忆模块的最佳实践/fig-02-bedrock-agentcore-memory-core-features.jpg)
 
 Amazon Bedrock AgentCore 的 Memory 模块是一个由亚马逊云科技托管的持久化记忆系统，用于存储和管理 AI Agent 的对话和知识。它提供**短期记忆（****short-term memory****）和长期记忆（long-term memory****）**两种模式。短期记忆负责在一次会话中记录最近的最近几轮对话，确保代理能够“记住”当前对话的上下文。长期记忆则从对话中提取结构化的关键信息，在多个会话之间保留知识，使Agent能够“学习”用户偏好、事实和摘要等信息。
 

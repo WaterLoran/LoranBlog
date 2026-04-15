@@ -2,7 +2,7 @@
 
 by [AWS Team](https://aws.amazon.com/cn/blogs/china/author/zhyawenm/) on 19 9月 2025 in [Generative AI](https://aws.amazon.com/cn/blogs/china/category/artificial-intelligence/generative-ai/) [Permalink](https://aws.amazon.com/cn/blogs/china/agentic-ai-infrastructure-practice-series-7/) [ Share](https://aws.amazon.com/cn/blogs/china/agentic-ai-infrastructure-practice-series-7/#)
 
-![AWS 中国博客横幅 – Agentic AI 基础设施实践系列](观测性在Agent应用的挑战与实践/aws-china-blog-banner-agentic-ai-series.png)
+![AWS 中国博客横幅 – Agentic AI 基础设施实践系列](/images/AgenticAI基础设施实践经验/观测性在Agent应用的挑战与实践/aws-china-blog-banner-agentic-ai-series.png)
 
 ## 一. 引言：
 
@@ -51,11 +51,11 @@ Agentic AI可观测性是一个多维度的概念，它不仅包括传统应用�
 
 而这些内容均可通过Opentelemerty 协议记录并传输到后端以供分析。在OpenTelemetry的追踪体系中，每个操作都有对应的span ID和trace ID，这两个标识符构成了分布式追踪的核心骨架。Trace ID代表Agent执行循环中的一次完整会话，从用户发起请求到Agent返回最终结果的整个生命周期都会共享同一个trace ID。而span ID则代表这个执行循环中的每个具体操作，如模型调用、工具执行、上下文检索等，每个span ID都是唯一的，并通过父子关系构建起完整的执行树状结构。在Agent场景中，一个trace包含了从用户输入到最终响应生成的所有中间步骤，每个步骤都通过span来表示。Agent traces通常包含模型调用span和工具调用span，这些span会根据其追踪的步骤类型，被丰富的上下文信息所充实。
 
-![图1. Agent完整执行链路](观测性在Agent应用的挑战与实践/fig-01-agent-full-execution-trace.png)
+![图1. Agent完整执行链路](/images/AgenticAI基础设施实践经验/观测性在Agent应用的挑战与实践/fig-01-agent-full-execution-trace.png)
 
 除了标准属性外，OpenTelemetry还提供了baggage机制来传递自定义的跨服务元数据。Baggage是一种分布式上下文传播机制，允许开发者在整个请求链路中传递业务相关的键值对信息。例如，可以通过baggage传递用户类型、实验标识、会话主题等业务属性，这些信息会自动附加到所有相关的span中，为后续的离线评估、性能分析和A/B测试提供宝贵的上下文。通过合理使用baggage机制，开发者可以实现更精细化的Agent行为分析和优化。
 
-![图2. OpenTelemetry span机制](观测性在Agent应用的挑战与实践/fig-02-opentelemetry-span-mechanism.png)
+![图2. OpenTelemetry span机制](/images/AgenticAI基础设施实践经验/观测性在Agent应用的挑战与实践/fig-02-opentelemetry-span-mechanism.png)
 
 许多Agent框架已自带Opentelemetry支持，但仍需要将Opentelemetry SDK嵌入应用中。对于采用Python开发的Agent，可使用自动注入方式，利用 opentelemetry-instrument 命令将SDK自动嵌入到应用中。这一命令会自动化配置流程，从参数或环境变量中生成Opentelemetry配置，并自动将SDK附加至Agent的内部，AWS调用，或其他的外部调用中。这样，Agent的所有操作都会被Opentelemetry记录并传输到后端。
 
@@ -232,11 +232,11 @@ with mlflow.start_run(run_name="StrandsAgentRun"):
 
 这些能力通过捕获工作负载服务、节点和工具执行的详细信息，为您的 AI 工作负载提供可观测性。可以在MLFlow Tracking Server 前端的 Trace 选项卡中，查看这些完整记录的执行信息。见如下示例：
 
-![图3. MLFlow trace页面](观测性在Agent应用的挑战与实践/fig-03-mlflow-trace-ui.png)
+![图3. MLFlow trace页面](/images/AgenticAI基础设施实践经验/观测性在Agent应用的挑战与实践/fig-03-mlflow-trace-ui.png)
 
 同时，对于使用 [Bedrock AgentCore](https://aws.amazon.com/cn/bedrock/agentcore/) 执行环境的Agents工作流来说，可以直接利用其集成至CloudWatch中的 GenAI Observability能力，直接获取整个Agent调用链的轨迹信息。见以下基于 AgentCore 进行 Strands Agents 搭建的调试示例。
 
-![图4. CloudWatch GenAI Observability页面](观测性在Agent应用的挑战与实践/fig-04-cloudwatch-genai-observability.png)
+![图4. CloudWatch GenAI Observability页面](/images/AgenticAI基础设施实践经验/观测性在Agent应用的挑战与实践/fig-04-cloudwatch-genai-observability.png)
 
 除了MLFlow之外，也可使用其他可观测性平台，例如Langfuse是一个专为LLM应用设计的开源可观测性平台，提供了完整的追踪、评估和分析能力。它支持多种LLM框架的集成，能够自动捕获Agent的执行轨迹、token使用情况和成本信息，并通过直观的Web界面展示这些数据，帮助开发者快速识别性能瓶颈和优化机会。
 
@@ -248,7 +248,7 @@ with mlflow.start_run(run_name="StrandsAgentRun"):
 
 示例环境可根据 [workshop](https://catalog.us-east-1.prod.workshops.aws/workshops/93a2eb2c-7f00-463a-92f1-ab0e6e81f48b/zh-CN) 进行创建，创建资源包括一个含有订单数据表格并通过 api gateway 对外暴露的电商系统，和一个通过网页交互的电商售后智能客服应用，智能客服 Agent 应用通过添加多个 MCP servers，其中包括调用电商系统的 API Gateway 接口的工具，来实现对电商系统中的订单进行查询并按照售后流程定义规则进行处理的功能。以下为智能客服的页面截图，支持添加丰富的 MCP servers, 选择不同的 LLM 模型。
 
-![图5. Agent应用客户端界面](观测性在Agent应用的挑战与实践/fig-05-agent-app-client-ui.png)
+![图5. Agent应用客户端界面](/images/AgenticAI基础设施实践经验/观测性在Agent应用的挑战与实践/fig-05-agent-app-client-ui.png)
 
 以上应用在开发阶段会在前端页面显示所有的模型和工具调用信息，在实际生产环境中基于数据安全应该在前端隐去。此时则可以将 Agent 的追踪数据打入到 Langfuse 平台进行监控，来保证重要指标的收集和功能异常的分析。
 
@@ -256,23 +256,23 @@ with mlflow.start_run(run_name="StrandsAgentRun"):
 
 使用两个不同的 user 对相同的问题进行测试，在 Langfuse 中观察到不同的 Latency, Token 和 Cost , 可以观察到 Claude 3.7 和 Nova Lite 分析过程和对工具的调用次数上一致，Claude 3.7 在成本上更有优势，而 Nova Lite 则在成本上更有优势。
 
-![图6. 使用Langfuse对模型分析对比](观测性在Agent应用的挑战与实践/fig-06-langfuse-model-comparison.png)
+![图6. 使用Langfuse对模型分析对比](/images/AgenticAI基础设施实践经验/观测性在Agent应用的挑战与实践/fig-06-langfuse-model-comparison.png)
 
 1. 模拟模型混用、网关智能路由的场景
 
 假设基于测试结果，团队希望使用 Nova Lite 为主要模型，Claude 3.7 为备用模型 ，对话过程中交替切换 LLM 来进行充分测试，发现出现错误。
 
-![图7. Agent客户端错误示例](观测性在Agent应用的挑战与实践/fig-07-agent-client-error-example.png)
+![图7. Agent客户端错误示例](/images/AgenticAI基础设施实践经验/观测性在Agent应用的挑战与实践/fig-07-agent-client-error-example.png)
 
 从 Langfuse 页面可以快速定位到历史对话采用 Claude 3.7 模型和当前切换的 Nova Lite 模型的信息格式不一致导致调用出错。基于此类的追踪分析，可以针对性的快速解决开发迭代和生产中遇到的问题。
 
-![图8. 使用Langfuse分析错误日志](观测性在Agent应用的挑战与实践/fig-08-langfuse-error-log-analysis.png)
+![图8. 使用Langfuse分析错误日志](/images/AgenticAI基础设施实践经验/观测性在Agent应用的挑战与实践/fig-08-langfuse-error-log-analysis.png)
 
 1. 模拟新功能上线，分析功能调用全流程
 
 售后客服扩展功能为不同卖家提供数据查询功能，应用后端通过 Mysql MCP server 接入电商系统数据库。以数据查询“查询今年销售额最高的3个客户”为例，虽然两种模型都可以完成查询，通过调用流程可以看到 Claude 3.7 对数据查询语句的生成思考更严谨，更适合用在数据分析的场景。
 
-![图9. 使用Langfuse分析调用全流程](观测性在Agent应用的挑战与实践/fig-09-langfuse-invocation-flow-analysis.png)
+![图9. 使用Langfuse分析调用全流程](/images/AgenticAI基础设施实践经验/观测性在Agent应用的挑战与实践/fig-09-langfuse-invocation-flow-analysis.png)
 
 ## 
 

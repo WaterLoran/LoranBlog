@@ -2,7 +2,7 @@
 
 by [AWS Team](https://aws.amazon.com/cn/blogs/china/author/zhyawenm/) on 19 9月 2025 in [Artificial Intelligence](https://aws.amazon.com/cn/blogs/china/category/artificial-intelligence/), [Generative AI](https://aws.amazon.com/cn/blogs/china/category/artificial-intelligence/generative-ai/), [Security, Identity, & Compliance](https://aws.amazon.com/cn/blogs/china/category/security-identity-compliance/) [Permalink](https://aws.amazon.com/cn/blogs/china/agentic-ai-infrastructure-practice-series-5/) [ Share](https://aws.amazon.com/cn/blogs/china/agentic-ai-infrastructure-practice-series-5/#)
 
-![AWS 中国博客横幅 – Agentic AI 基础设施实践系列](Agent应用系统中的身份认证与授权管理/aws-china-blog-banner-agentic-ai-series.png)
+![AWS 中国博客横幅 – Agentic AI 基础设施实践系列](/images/AgenticAI基础设施实践经验/Agent应用系统中的身份认证与授权管理/aws-china-blog-banner-agentic-ai-series.png)
 
 ## 1. 引言
 
@@ -53,7 +53,7 @@ Agentic AI系统中，普遍采用的授权机制是基于OAuth 2.0进行的，�
 
 下图是2LO和3LO授权流程的典型步骤说明：
 
-![图1 – 2LO和3LO授权流程](Agent应用系统中的身份认证与授权管理/fig-01-oauth-2lo-3lo-flow.jpg)
+![图1 – 2LO和3LO授权流程](/images/AgenticAI基础设施实践经验/Agent应用系统中的身份认证与授权管理/fig-01-oauth-2lo-3lo-flow.jpg)
 
 #### 2.3.1 2LO 授权流程
 
@@ -92,15 +92,15 @@ Token 请求: 客户端通过授权code和 `client_secret` 与授权服务器交
 
 对于身份欺骗和冒充威胁，在一个典型的Agentic AI逻辑架构中，需要进行身份认证与授权的交互点非常多、且涉及到非一方自研的部分，导致风险点的控制变得复杂。身份的传递（如下图蓝色箭头和编号）是重要内容之一，最初User的身份管理和认证、Agent Action对User 身份和鉴权会话（Access Token）的传递、tools对User 的授权等，如下图：
 
-![图2 – 身份欺骗和冒充威胁的分布点](Agent应用系统中的身份认证与授权管理/fig-02-identity-spoofing-threat-surface.jpg)
+![图2 – 身份欺骗和冒充威胁的分布点](/images/AgenticAI基础设施实践经验/Agent应用系统中的身份认证与授权管理/fig-02-identity-spoofing-threat-surface.jpg)
 
 ### 3.1 Agentic AI中的身份认证与授权，和传统应用中的身份认证与授权的核心区别
 
 传统应用（没有使用Agentic AI之前的应用）对用户的身份管理和授权是非常明确的，即对当前登录应用系统的用户身份进行认证和授权，包括单点登录SSO认证、细粒度授权和OAuth授权等。但应用系统中引入Agentic AI技术后，数据的查询和第三方系统的调用等，会由AI Agent代理来完成，因为当前登录的用户要查询或操作的内容可能不是对其自身的查询或操作，有可能是通过prompt的方式查询或操作其他用户的信息，这一点是与传统应用的最大区别。我们通过两个示例图来进行对比和说明：
 
-![图3 – 传统应用中的身份认证与授权架构](Agent应用系统中的身份认证与授权管理/fig-03-traditional-app-auth-architecture.jpg)
+![图3 – 传统应用中的身份认证与授权架构](/images/AgenticAI基础设施实践经验/Agent应用系统中的身份认证与授权管理/fig-03-traditional-app-auth-architecture.jpg)
 
-![图4 – Agentic AI系统中的身份认证与授权架构](Agent应用系统中的身份认证与授权管理/fig-04-agentic-ai-app-auth-architecture.jpg)
+![图4 – Agentic AI系统中的身份认证与授权架构](/images/AgenticAI基础设施实践经验/Agent应用系统中的身份认证与授权管理/fig-04-agentic-ai-app-auth-architecture.jpg)
 
 Agentic AI 应用系统中的授权问题反映了传统访问控制模型的根本性局限。当数据通过训练、微调或检索增强生成（RAG）方式被输入到LLM中后，模型本身无法判断请求者是否有权访问这些数据。这种情况下，授权决策必须在AI应用的其他层面实现，而不能依赖模型本身的判断。
 
@@ -116,7 +116,7 @@ MCP协议的设计理念导致其在架构层面就系统性地引入了传统�
 
 混淆代理问题是AI应用安全中最具挑战性的威胁之一，并把传统的威胁效果放大。这种攻击利用了AI系统的代理特性，通过具有更高权限的AI应用间接获取原本无权访问的资源。攻击的典型场景是：用户直接访问某个资源会被拒绝，但通过AI应用访问同样的资源却能成功，从而绕过了原有的安全控制。混淆代理安全威胁示例：直接访问 S3 存储桶的用户会被拒绝访问；但访问 LLM 的用户（使用 RAG 并存储来自同一 S3 存储桶的数据）则会获得访问权限。
 
-![图5 – Agent系统中混淆代理示意图](Agent应用系统中的身份认证与授权管理/fig-05-confused-deputy-agent-system.jpg)
+![图5 – Agent系统中混淆代理示意图](/images/AgenticAI基础设施实践经验/Agent应用系统中的身份认证与授权管理/fig-05-confused-deputy-agent-system.jpg)
 
 这种攻击的根本原因在于AI应用和底层资源之间的权限不匹配。AI应用为了完成复杂任务，往往被授予了较高的系统权限，但这些权限的使用缺乏细粒度的控制。当用户通过AI应用间接访问资源时，实际上是借用了AI应用的权限，而不是基于用户自身的权限。
 
@@ -130,7 +130,7 @@ MCP协议的设计理念导致其在架构层面就系统性地引入了传统�
 
 OWASP对于Agentic AI的15个威胁风险中，虽然只有2个与身份相关，但这两个风险点特别是T9身份欺骗与冒充威胁，会发生在Agentic AI系统中的多个环节，因此构建Agentic AI系统的端到端身份管理解决方案是非常有必要的，具体参考架构图如下：
 
-![图6 – Agentic AI系统中端到端身份认证与授权架构](Agent应用系统中的身份认证与授权管理/fig-06-end-to-end-identity-auth-architecture.jpg)
+![图6 – Agentic AI系统中端到端身份认证与授权架构](/images/AgenticAI基础设施实践经验/Agent应用系统中的身份认证与授权管理/fig-06-end-to-end-identity-auth-architecture.jpg)
 
 端到端的身份认证与授权系统，包括如下几个核心能力。具体示例可以参考下一章节的基于亚马逊Bedrock AgentCore Identity开发Agentic AI系统的身份模块的相关内容。
 
@@ -153,7 +153,7 @@ AgentCore Identity 解决了 AI 代理部署中的一个根本性挑战：让代
 
 出站授权：Outbound Auth 是指已通过入站认证的代理，安全访问目标服务的认证机制，使代理能够安全地调用各种外部API、Lambda函数等资源。
 
-![图7 – Bedrock AgentCore Identity认证与授权架构图](Agent应用系统中的身份认证与授权管理/fig-07-bedrock-agentcore-identity-auth.jpg)
+![图7 – Bedrock AgentCore Identity认证与授权架构图](/images/AgenticAI基础设施实践经验/Agent应用系统中的身份认证与授权管理/fig-07-bedrock-agentcore-identity-auth.jpg)
 
 #### 入站授权
 
@@ -225,7 +225,7 @@ Amazon Bedrock AgentCore Identity验证对 AWS 资源、第三方服务或 Agent
 
 通过如下参考架构，可以实现完整的身份认证与授权流程。
 
-![图8 – 构建端到端身份认证与授权架构](Agent应用系统中的身份认证与授权管理/fig-08-bedrock-agents-fine-grained-access-architecture.jpg)
+![图8 – 构建端到端身份认证与授权架构](/images/AgenticAI基础设施实践经验/Agent应用系统中的身份认证与授权管理/fig-08-bedrock-agents-fine-grained-access-architecture.jpg)
 
 ### 4.3 方案三： 基于亚马逊云科技中国区服务构建灵活可控全自建方案
 
@@ -237,7 +237,7 @@ Amazon Bedrock AgentCore Identity验证对 AWS 资源、第三方服务或 Agent
 
 **适用场景：**数据高敏感、权限差异大、异构 IT 环境、对接自有 ID 体系或多活部署的 Agent 应用。
 
-![图9 – 基于亚马逊云科技中国区服务构建灵活可控全自建方案](Agent应用系统中的身份认证与授权管理/fig-09-china-region-self-managed-auth-architecture.png)
+![图9 – 基于亚马逊云科技中国区服务构建灵活可控全自建方案](/images/AgenticAI基础设施实践经验/Agent应用系统中的身份认证与授权管理/fig-09-china-region-self-managed-auth-architecture.png)
 
 ### 4.4 MCP Server 认证&授权管理
 

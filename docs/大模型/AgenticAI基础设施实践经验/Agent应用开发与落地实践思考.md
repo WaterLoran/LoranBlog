@@ -2,7 +2,7 @@
 
 by [AWS Team](https://aws.amazon.com/cn/blogs/china/author/zhyawenm/) on 19 9月 2025 in [Artificial Intelligence](https://aws.amazon.com/cn/blogs/china/category/artificial-intelligence/), [Generative AI](https://aws.amazon.com/cn/blogs/china/category/artificial-intelligence/generative-ai/) [Permalink](https://aws.amazon.com/cn/blogs/china/agentive-ai-infrastructure-practice-series-1/) [ Share](https://aws.amazon.com/cn/blogs/china/agentive-ai-infrastructure-practice-series-1/#)
 
-![AWS 中国博客横幅 – Agentic AI 基础设施实践系列](Agent应用开发与落地实践思考/aws-china-blog-banner-agentic-ai-series.png)
+![AWS 中国博客横幅 – Agentic AI 基础设施实践系列](/images/AgenticAI基础设施实践经验/Agent应用开发与落地实践思考/aws-china-blog-banner-agentic-ai-series.png)
 
 在过去的短短几年内，[基础模型(FMs)](https://aws.amazon.com/what-is/foundation-models/?trk=e61dee65-4ce8-4738-84db-75305c9cd4fe&sc_channel=el)已经从直接用于响应用户提示创建内容，发展到现在为[AI Agent](https://aws.amazon.com/what-is/ai-agents/?trk=e61dee65-4ce8-4738-84db-75305c9cd4fe&sc_channel=el)提供动力。AI Agent是一类新型软件应用，它们使用基础模型来推理、规划、行动、学习和适应，以追求用户定义的任务目标，同时只需要有限的人工监督。AI Agent由基础模型驱动，其不确定性和非预定义逻辑的运行机制，为开发者带来了全新的应用开发和运维范式。基于在多个项目中积累的Agent应用构建经验，我们为您整理了一系列Agentic AI基础设施实践经验内容。这些内容详细介绍了构建Agent应用所需的沙盒、记忆、评估、可观测性和工具部署等多个维度的经验，帮助您全面深入地掌握Agent构建的基本环节。
 
@@ -31,7 +31,7 @@ by [AWS Team](https://aws.amazon.com/cn/blogs/china/author/zhyawenm/) on 19 9月
 
 将上述开发和生产需求抽象出来，形成Agentic AI基础设施的单元，如图所示：
 
-![图1 – Agent系统架构与基础设施单元](Agent应用开发与落地实践思考/fig-01-agent-system-architecture-infra-units.png)
+![图1 – Agent系统架构与基础设施单元](/images/AgenticAI基础设施实践经验/Agent应用开发与落地实践思考/fig-01-agent-system-architecture-infra-units.png)
 
 图1 – Agent系统架构与基础设施单元
 
@@ -77,7 +77,7 @@ by [AWS Team](https://aws.amazon.com/cn/blogs/china/author/zhyawenm/) on 19 9月
 
 有了以上架构支撑，Agent开发者可以更快速地将CI/CD流水线与Agentic AI基础设施单元集成，实现从应用逻辑开发到生产部署的快速上线和产品迭代。
 
-![图2 – Agentic AI 应用的CI/CD流程](Agent应用开发与落地实践思考/fig-02-agentic-ai-cicd-pipeline.png)
+![图2 – Agentic AI 应用的CI/CD流程](/images/AgenticAI基础设施实践经验/Agent应用开发与落地实践思考/fig-02-agentic-ai-cicd-pipeline.png)
 
 图2 – Agentic AI 应用的CI/CD流程
 
@@ -89,7 +89,7 @@ Agent应用需要基于多种核心功能模块的协作，同时依赖多个支
 
 DevOps 实现了高效地管理**确定性系统**，相同的输入通常会产生可预期的输出。其监控重点、部署流程也相对标准化，我们可以通过明确的错误堆栈和日志快速定位问题。在 MLOps 时代引入了不确定性，模型的性能会随时间衰减，需要持续的数据反馈，也要管理数据集、模型权重、超参数等。AI Agent 应用不仅具有非确定性体现在它们展现出的“智能行为”：Agent 能 **自主决策**、调用外部工具或 API 并持续演化，这对 **可复现性、成本、合规性** 提出了更高要求。
 
-![图3 – 生成式 AI 中的 Ops 及其关系](Agent应用开发与落地实践思考/fig-03-generative-ai-ops-relations.png)
+![图3 – 生成式 AI 中的 Ops 及其关系](/images/AgenticAI基础设施实践经验/Agent应用开发与落地实践思考/fig-03-generative-ai-ops-relations.png)
 
 图3 – 生成式 AI 中的 Ops 及其关系
 
@@ -125,7 +125,7 @@ AgentOps 是将 DevOps/MLOps 能力扩展到 Agent 系统的一套运维范式�
 
 平台工程(**Platform Engineering**)是一门设计和构建工具链和工作流程的学科，其核心理念是通过抽象复杂性、标准化流程、提供自助服务能力来提升开发者体验和生产力。
 
-![图 4 – 平台工程的构成](Agent应用开发与落地实践思考/fig-04-platform-engineering-composition.png)
+![图 4 – 平台工程的构成](/images/AgenticAI基础设施实践经验/Agent应用开发与落地实践思考/fig-04-platform-engineering-composition.png)
 
 图 4 – 平台工程的构成
 
@@ -170,13 +170,13 @@ AgentOps 是将 DevOps/MLOps 能力扩展到 Agent 系统的一套运维范式�
 
 亚马逊云科技在Agent开发领域提供了最全面而深入的产品支持，从包含各类底层算力的加速芯片、到托管的机器学习平台Amazon SageMaker，再到Agent基础模型调用和平台服务Amazon Bedrock、Agent开发SDK Strands Agents，以及面向垂类应用场景的Agent软件服务等，端到端地为各类开发者提供专业的服务。
 
-![图5 – 亚马逊云科技Agent技术栈](Agent应用开发与落地实践思考/fig-05-aws-agent-technology-stack.png)
+![图5 – 亚马逊云科技Agent技术栈](/images/AgenticAI基础设施实践经验/Agent应用开发与落地实践思考/fig-05-aws-agent-technology-stack.png)
 
 图5 – 亚马逊云科技Agent技术栈
 
 其中，Amazon Bedrock AgentCore是一款业界领先的专为Agent应用打造的基础设施服务。它依托亚马逊云科技多年沉淀的强大基础能力，提供安全、弹性、高可用和免运维等一系列Agent必备组件，使开发者能便捷构建完整的”生产就绪”Agent应用。
 
-![图6 – Amazon Bedrock AgentCore能力模块及架构](Agent应用开发与落地实践思考/fig-06-bedrock-agentcore-modules-architecture.png)
+![图6 – Amazon Bedrock AgentCore能力模块及架构](/images/AgenticAI基础设施实践经验/Agent应用开发与落地实践思考/fig-06-bedrock-agentcore-modules-architecture.png)
 
 图6 – Amazon Bedrock AgentCore能力模块及架构
 

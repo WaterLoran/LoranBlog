@@ -2,7 +2,7 @@
 
 by [AWS Team](https://aws.amazon.com/cn/blogs/china/author/xubxu/) on 19 9月 2025 in [Generative AI](https://aws.amazon.com/cn/blogs/china/category/generative-ai-2/) [Permalink](https://aws.amazon.com/cn/blogs/china/privacy-and-security-of-agent-applications/) [ Share](https://aws.amazon.com/cn/blogs/china/privacy-and-security-of-agent-applications/#)
 
-![AWS 中国博客横幅 – Agentic AI 基础设施实践系列](Agent应用的隐私和安全/aws-china-blog-banner-agentic-ai-series.png)
+![AWS 中国博客横幅 – Agentic AI 基础设施实践系列](/images/AgenticAI基础设施实践经验/Agent应用的隐私和安全/aws-china-blog-banner-agentic-ai-series.png)
 
 ## Agentic AI 安全简介
 
@@ -10,7 +10,7 @@ Agentic AI代表了自主系统的重大进步，在大型语言模型（LLM）�
 
 本文重点关注因引入Agentic AI技术和对应组件后而带来的新的、特有的安全威胁。对于一个Agentic AI系统，传统的网络安全控制措施、生成式AI安全的控制措施仍然适用、有效且必要。我们建议的安全防护思路采用分层模型设计。图1 所示，从外层的通用应用安全，到生成式 AI 安全，再深入到 Agentic AI 内部的身份管理、工具操纵、记忆投毒等关键风险控制。
 
-![图1 通用应用安全、生成式AI安全与Agentic AI安全的对应关系](Agent应用的隐私和安全/fig-01-app-genai-agentic-security-layers.png)
+![图1 通用应用安全、生成式AI安全与Agentic AI安全的对应关系](/images/AgenticAI基础设施实践经验/Agent应用的隐私和安全/fig-01-app-genai-agentic-security-layers.png)
 
 ## 全面理解Agentic AI所特有的安全威胁
 
@@ -46,7 +46,7 @@ OWASP基于Agentic AI的特性及应用系统部署架构、各领域专家的�
 
 OWASP组织系统地梳理了 Agentic AI 系统中的关键风险位置，如下图2所示。这些风险点（T1-T15）横跨输入处理、记忆读写、工具调用、输出生成等多个环节，攻击面非常广。其中标记“*”标记符的威胁点，是比较典型的安全威胁，也是经常出现安全事件的地方，需要重点关注的。
 
-![图2 Agentic AI架构风险点总览](Agent应用的隐私和安全/fig-02-agentic-ai-threat-surface-overview.png)
+![图2 Agentic AI架构风险点总览](/images/AgenticAI基础设施实践经验/Agent应用的隐私和安全/fig-02-agentic-ai-threat-surface-overview.png)
 
 ## 企业如何系统性地梳理Agentic AI 安全威胁
 
@@ -66,7 +66,7 @@ OWASP Agentic 威胁框架提供了一个针对如上T1至T15的威胁的分类�
 
 如上步骤1-3是最关键的内容。Agentic AI的核心能力是基于大模型的自主规划和决策，也正是这种能力导致了其特有的安全风险。恶意的工具，包含注入攻击的工具说明（指令），工具指令原本无风险、但版本升级后可能引入注入风险，工具交换的内容中可能带入间接的注入攻击，这四个方面是最常见的出现安全事件的工具点，如下图3中的箭头所示。
 
-![图3：常见攻击路径示意图](Agent应用的隐私和安全/fig-03-common-attack-paths.png)
+![图3：常见攻击路径示意图](/images/AgenticAI基础设施实践经验/Agent应用的隐私和安全/fig-03-common-attack-paths.png)
 
 基于如上的系统性威胁分析及关键风险点的理解，下面章节将逐一展开与之对应的防护机制的设计思路与实现方案，包括在整个软件开发生命周期中的控制、恰当地设置Guardrails 策略、Agentic 系统的软件架构设计层面、AgentCore 网关进行MCP 服务器集中治理等，力求在实用层面帮助构建可信的 Agentic AI 系统。
 
@@ -131,7 +131,7 @@ OWASP Agentic 威胁框架提供了一个针对如上T1至T15的威胁的分类�
 2. 隔离的AI代理：可以基于工具的输入内容进行规划、推理，即可以使用数据面信息，但隔离在受限的缓解内；
 3. 隔离的AI代理与主代理之间，只传递必要的结构化数据；
 
-![图4：逻辑隔离的多AI代理架构](Agent应用的隐私和安全/fig-04-isolated-multi-agent-architecture.png)
+![图4：逻辑隔离的多AI代理架构](/images/AgenticAI基础设施实践经验/Agent应用的隐私和安全/fig-04-isolated-multi-agent-architecture.png)
 
 ### 使用Amazon Bedrock Guardrails对 Agent 推理进行安全防护
 
@@ -154,7 +154,7 @@ OWASP Agentic 威胁框架提供了一个针对如上T1至T15的威胁的分类�
 
 为了应对上述安全隐患，企业可以采用多层防护策略，在每次的用户输入、大模型的规划、记忆数据存储、工具描述和响应内容、Agent最终给用户的响应、跨Agent之间的消息传递等，各个环节都独立调用Amazon Bedrock Guardrails进行过滤，特别是提示词注入攻击的过滤，可以有效缓解注入攻击的风险。
 
-![图5：通过Amazon Bedrock Guardrails进行分层过滤](Agent应用的隐私和安全/fig-05-bedrock-guardrails-layered-filtering.png)
+![图5：通过Amazon Bedrock Guardrails进行分层过滤](/images/AgenticAI基础设施实践经验/Agent应用的隐私和安全/fig-05-bedrock-guardrails-layered-filtering.png)
 
 #### 实施方法及代码示例
 
@@ -824,7 +824,7 @@ s.items():
 MCP服务器在企业中的使用会越来越多，包括内部开发的MCP服务器、第三方商业化的MCP服务器、开源社区的MCP服务器，等等。这些各种不同类型的MCP服务器，在开发、分发和运营阶段都有可能进入安全威胁。为了降低安全风险，我们建议企业搭建集中的MCP服务器管理平台，对各种不同类型的MCP服务器进行集中管理，只有通过安全审查的服务器才能被部署和使用；建议制定明确的安全管理策略，对存在漏洞、长期无人维护或不再符合安全标准的MCP服务器应及时下架和禁用。
 亚马逊云科技于2025年7月发布的Agentic AI产品 [Bedrock AgentCore](https://aws.amazon.com/cn/bedrock/agentcore/)服务，其中[AgentCore Gateway组件](https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/gateway.html)也能帮助客户进行统一的MCP服务器和API服务等的集中治理，如下图所示。
 
-![图5：基于AgentCore Gateway进行MCP服务器的集中治理](Agent应用的隐私和安全/fig-06-agentcore-gateway-mcp-governance.png)
+![图5：基于AgentCore Gateway进行MCP服务器的集中治理](/images/AgenticAI基础设施实践经验/Agent应用的隐私和安全/fig-06-agentcore-gateway-mcp-governance.png)
 
 在MCP生态这个全新的软件供应链框架中， AI 客户端（如 IDE 插件或桌面应用）可以按需引用或连接到由世界各地匿名开发者创建和托管的任意 MCP 服务器。这些服务器的代码质量、安全实践和维护状态参差不齐，且通常缺乏任何形式的官方认证、审计或信任背书。用户或组织在集成一个新的 MCP 服务器时，实际上是在其系统中引入了一系列新的、未经验证的依赖项，这与传统软件开发中对第三方库进行严格审查的做法形成了鲜明对比。因此，整个 MCP 生态系统被定义为一个 “ 高风险、高速度、零信任 ” 的软件供应链，其中任何一个环节的薄弱都可能导致系统性的安全风险。
 Amazon Bedrock AgentCore Gateway可以一定程度上缓解类似的风险。Amazon Bedrock AgentCore Gateway是AWS在2025年7月推出的预览版服务，作为Amazon Bedrock AgentCore生态系统的核心组件之一。它主要解决Agent在生产环境中与外部工具、API和服务集成的复杂性问题，除此之外，Amazon Bedrock AgentCore Gateway不仅是AI智能体的工具集成平台，更是企业级安全防护的关键组件。它在AI智能体生态中承担着”安全网关”的核心角色，可以很大程度解决传统AI智能体部署中最为关键的安全和隐私挑战，包括：
