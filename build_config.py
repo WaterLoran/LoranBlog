@@ -1,16 +1,6 @@
 import os
 
 
-def find_first_markdown_file(directory):
-    """找到目录中的第一个Markdown文件"""
-    for root, dirs, files in os.walk(directory):
-        for file in files:
-            if file.endswith('.md'):
-                relative_path = os.path.relpath(os.path.join(root, file), directory)
-                return relative_path.replace("\\", "/")[:-3]
-    return None
-
-
 def generate_nav_sidebar(base_path):
     nav = []
     sidebar = {}
@@ -27,22 +17,27 @@ def generate_nav_sidebar(base_path):
         if not files:
             continue
 
+        md_names = sorted(f for f in files if f.endswith('.md'))
+        # 仅当当前目录下直接存在 .md 时才生成 nav/sidebar（例如同级只有图片子目录、无 md 的文件夹不生成，避免 path 为 .../None 或无效路由）
+        if not md_names:
+            continue
+
+        first_stem = os.path.splitext(md_names[0])[0]
+
         relative_path = os.path.relpath(root, base_path)
         relative_path = relative_path.replace("\\", "/")  # 将反斜杠替换为正斜杠
         sections = relative_path.split("/")
 
         if len(sections) == 1:
-            first_file = find_first_markdown_file(root)
-            if first_file and sections[0] != '.':
+            if sections[0] != '.':
                 nav.append({
                     "text": sections[0],
-                    "link": f"/{sections[0]}/{first_file}",
+                    "link": f"/{sections[0]}/{first_stem}",
                     "items": []
                 })
                 sidebar[f'/{sections[0]}/'] = []
         else:
             # Handle nav creation
-            section_path = '/'.join(sections[:-1])
             nav_item = next((item for item in nav if item['text'] == sections[0]), None)
             if nav_item is None:
                 nav_item = {
@@ -51,11 +46,10 @@ def generate_nav_sidebar(base_path):
                 }
                 nav.append(nav_item)
 
-            first_file = find_first_markdown_file(root)
-            if first_file and sections[-1] != '.':
+            if sections[-1] != '.':
                 nav_item["items"].append({
                     "text": sections[-1],
-                    "link": f'/{relative_path}/{first_file}'
+                    "link": f'/{relative_path}/{first_stem}'
                 })
 
             # Handle sidebar creation
@@ -66,12 +60,11 @@ def generate_nav_sidebar(base_path):
             if sections[-1] != '.':
                 sidebar[sidebar_key].append({
                     "title": sections[-1],
-                    "path": f'/{relative_path}/{first_file}',
+                    "path": f'/{relative_path}/{first_stem}',
                     "collapsable": False,
                     "children": [
-                        {"title": os.path.splitext(file)[0], "path": f'/{relative_path}/{file}'.replace("\\", "/")[:-3]}
-                        # 最后要去掉.md
-                        for file in files if file.endswith('.md')
+                        {"title": os.path.splitext(name)[0], "path": f'/{relative_path}/{os.path.splitext(name)[0]}'.replace("\\", "/")}
+                        for name in md_names
                     ]
                 })
 
