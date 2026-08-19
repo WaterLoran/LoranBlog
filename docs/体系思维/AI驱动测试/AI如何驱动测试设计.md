@@ -1,11 +1,16 @@
 # AI如何驱动测试设计
 
+![AI如何驱动测试设计](/images/AI如何驱动测试设计/banner.webp)
+
 ## AI如何驱动测试设计：理论、方法与Checklist
 
 测试设计是软件测试流程中最核心也最具创造性的环节——它决定“测什么”和“怎么测”。AI驱动测试设计的核心价值，是将测试人员从重复性的测试用例编写中解放出来，转向更高阶的测试策略设计，实现从“功能验证”到“概率系统评测”的范式变革。
 
 
 ### 一、核心理论基础
+
+<img src="/images/AI如何驱动测试设计/section-01.webp" alt="一、核心理论基础" loading="lazy" />
+
 
 #### 1. 元需求与设计原则理论
 
@@ -31,6 +36,9 @@ LLM-based Unit Test Generation的理论基础由六个元需求（Meta-Requireme
 
 
 ### 二、实践方法与技术路径
+
+<img src="/images/AI如何驱动测试设计/section-02.webp" alt="二、实践方法与技术路径" loading="lazy" />
+
 
 #### 2.1 基于测试设计技术的智能生成
 
@@ -89,6 +97,9 @@ AI智能体可以在测试设计中扮演多种角色，形成“Agent团队”�
 | **Functionize**           | NLP驱动的测试创建，99.97%元素识别准确率                      | 企业级复杂应用测试 |
 
 [reference:19][reference:20][reference:21]
+
+<img src="/images/AI如何驱动测试设计/section-03.webp" alt="三、AI测试设计工具与平台" loading="lazy" />
+
 
 
 ### 四、可执行的Checklist

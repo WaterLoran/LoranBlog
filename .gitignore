@@ -1,2 +1,9 @@
 node_modules
 docs/.vuepress/dist
+
+# 日志与敏感文件
+logs/
+password.txt
+.DS_Store
+assets-src/
+page-demo/

@@ -1,3 +1,5 @@
+![Devops与敏捷开发](/images/Devops与敏捷开发/banner.webp)
+
 DevOps 和敏捷开发（Agile Development）经常被一起提及，甚至被混淆，但它们解决的是不同层面、不同阶段的问题。
 
 简单来说，它们的核心区别是：

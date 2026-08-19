@@ -1,5 +1,7 @@
 # 优秀的SDD实践
 
+![优秀的SDD实践](/images/优秀的SDD实践/banner.webp)
+
 目前行业里最好的 SDD 实践，已经不只是一份文档先行，而是形成了一套 **“规格即代码 + 制品自动生成 + 流水线强制验证”** 的闭环。核心特征就三点：
 
 1.  **规格是唯一事实来源**，存于 Git，参与代码评审、版本管理。
@@ -13,6 +15,9 @@
 ### 1. REST API：基于 OpenAPI 的 Design-First 流水线
 
 **场景**：开发一个“订单服务”，提供创建订单接口。
+
+<img src="/images/优秀的SDD实践/section-01.webp" alt="1. REST API：基于 OpenAPI 的 Design-First 流水线" loading="lazy" />
+
 
 #### ① 先写规格（OpenAPI 3.1 片段）
 ```yaml
@@ -82,6 +87,9 @@ components:
 
 **场景**：内部微服务间用 gRPC 通信，需要强类型、高性能和严格的破坏性变更检查。
 
+<img src="/images/优秀的SDD实践/section-02.webp" alt="2. gRPC/微服务：Protobuf + Buf 的契约治理" loading="lazy" />
+
+
 #### ① 先定义规格（user.proto）
 ```protobuf
 syntax = "proto3";
@@ -118,6 +126,9 @@ message GetUserResponse {
 ### 3. 事件驱动/异步：AsyncAPI 让消息契约可见
 
 **场景**：订单服务发布 `order.placed` 事件，多个下游消费。
+
+<img src="/images/优秀的SDD实践/section-03.webp" alt="3. 事件驱动/异步：AsyncAPI 让消息契约可见" loading="lazy" />
+
 
 #### ① 事件规格（asyncapi.yaml）
 ```yaml
